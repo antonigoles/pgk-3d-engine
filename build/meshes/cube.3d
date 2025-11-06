@@ -1,0 +1,38 @@
+// Vector format: v {x} {y} {z}
+// Triangle format: t {vector_index1} {vector_index2} {vector_index3}
+
+// Wierzchołki (0–7)
+v -1.0 -1.0  1.0   // 0 - front bottom left
+v  1.0 -1.0  1.0   // 1 - front bottom right
+v  1.0  1.0  1.0   // 2 - front top right
+v -1.0  1.0  1.0   // 3 - front top left
+v -1.0 -1.0 -1.0   // 4 - back bottom left
+v  1.0 -1.0 -1.0   // 5 - back bottom right
+v  1.0  1.0 -1.0   // 6 - back top right
+v -1.0  1.0 -1.0   // 7 - back top left
+
+// Trójkąty (każda ściana = 2 trójkąty, wierzchołki CLOCKWISE patrząc z ZEWNĄTRZ)
+
+// Przód (+Z)
+t 0 2 1
+t 0 3 2
+
+// Tył (–Z)
+t 4 5 6
+t 4 6 7
+
+// Lewa (–X)
+t 4 3 0
+t 4 7 3
+
+// Prawa (+X)
+t 1 2 6
+t 1 6 5
+
+// Dół (–Y)
+t 4 1 5
+t 4 0 1
+
+// Góra (+Y)
+t 3 7 6
+t 3 6 2
