@@ -1,0 +1,10 @@
+// Vector format: v {x} {y} {z}
+// Triangle format: t {vector_index1} {vector_index2} {vector_index3}
+
+v -1.0  0.0  -1.0
+v  1.0  0.0  -1.0
+v  1.0  0.0  1.0
+v -1.0  0.0  1.0
+
+t 0 1 2
+t 0 2 3

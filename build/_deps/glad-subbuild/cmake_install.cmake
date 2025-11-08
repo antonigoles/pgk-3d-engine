@@ -1,4 +1,4 @@
-# Install script for directory: /home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild
+# Install script for directory: /home/antoni/pgk-3d-engine/build/_deps/glad-subbuild
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

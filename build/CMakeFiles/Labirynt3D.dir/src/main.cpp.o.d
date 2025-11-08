@@ -1,7 +1,6 @@
 CMakeFiles/Labirynt3D.dir/src/main.cpp.o: \
- /home/antoni/studia/pgk/pracownia-3/src/main.cpp \
- /usr/include/stdc-predef.h /usr/include/c++/13/iostream \
- /usr/include/c++/13/bits/requires_hosted.h \
+ /home/antoni/pgk-3d-engine/src/main.cpp /usr/include/stdc-predef.h \
+ /usr/include/c++/13/iostream /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -177,13 +176,13 @@ CMakeFiles/Labirynt3D.dir/src/main.cpp.o: \
  /usr/include/c++/13/tr1/poly_hermite.tcc \
  /usr/include/c++/13/tr1/poly_laguerre.tcc \
  /usr/include/c++/13/tr1/riemann_zeta.tcc \
- /home/antoni/studia/pgk/pracownia-3/include/OpenGL.hpp \
- /home/antoni/studia/pgk/pracownia-3/build/_deps/glad-build/include/glad/glad.h \
- /home/antoni/studia/pgk/pracownia-3/build/_deps/glad-build/include/KHR/khrplatform.h \
+ /home/antoni/pgk-3d-engine/include/OpenGL.hpp \
+ /home/antoni/pgk-3d-engine/build/_deps/glad-build/include/glad/glad.h \
+ /home/antoni/pgk-3d-engine/build/_deps/glad-build/include/KHR/khrplatform.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
- /home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-src/include/GLFW/glfw3.h \
+ /home/antoni/pgk-3d-engine/build/_deps/glfw-src/include/GLFW/glfw3.h \
  /usr/include/glm/glm.hpp /usr/include/glm/detail/_fixes.hpp \
  /usr/include/glm/detail/setup.hpp /usr/include/c++/13/cassert \
  /usr/include/assert.h /usr/include/glm/simd/platform.h \
@@ -353,8 +352,37 @@ CMakeFiles/Labirynt3D.dir/src/main.cpp.o: \
  /usr/include/glm/ext/vector_uint1.hpp \
  /usr/include/glm/ext/vector_uint1_sized.hpp /usr/include/c++/13/cstring \
  /usr/include/string.h /usr/include/strings.h \
- /usr/include/glm/gtc/type_ptr.inl \
- /home/antoni/studia/pgk/pracownia-3/include/Engine/Window.hpp \
- /home/antoni/studia/pgk/pracownia-3/include/Engine/Camera.hpp \
- /home/antoni/studia/pgk/pracownia-3/include/Engine/Math/Transform.hpp \
- /home/antoni/studia/pgk/pracownia-3/include/Engine/Init.hpp
+ /usr/include/glm/gtc/type_ptr.inl /usr/include/glm/gtx/norm.hpp \
+ /usr/include/glm/gtx/quaternion.hpp \
+ /usr/include/glm/ext/quaternion_exponential.hpp \
+ /usr/include/glm/ext/quaternion_exponential.inl \
+ /usr/include/glm/gtx/quaternion.inl \
+ /usr/include/glm/gtx/component_wise.hpp \
+ /usr/include/glm/detail/setup.hpp \
+ /usr/include/glm/gtx/component_wise.inl /usr/include/glm/gtx/norm.inl \
+ /home/antoni/pgk-3d-engine/include/Engine/Window.hpp \
+ /home/antoni/pgk-3d-engine/include/Engine/Camera.hpp \
+ /home/antoni/pgk-3d-engine/include/Engine/Math/Transform.hpp \
+ /home/antoni/pgk-3d-engine/include/Engine/Player.hpp \
+ /home/antoni/pgk-3d-engine/include/Engine/GameObject.hpp \
+ /home/antoni/pgk-3d-engine/include/Engine/Misc/Types.hpp \
+ /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_uninitialized.h \
+ /usr/include/c++/13/bits/stl_vector.h \
+ /usr/include/c++/13/bits/stl_bvector.h \
+ /usr/include/c++/13/bits/vector.tcc /usr/include/c++/13/functional \
+ /usr/include/c++/13/bits/std_function.h \
+ /usr/include/c++/13/unordered_map \
+ /usr/include/c++/13/bits/unordered_map.h \
+ /usr/include/c++/13/bits/hashtable.h \
+ /usr/include/c++/13/bits/hashtable_policy.h \
+ /usr/include/c++/13/ext/aligned_buffer.h \
+ /usr/include/c++/13/bits/enable_special_members.h \
+ /usr/include/c++/13/bits/node_handle.h \
+ /usr/include/c++/13/bits/erase_if.h /usr/include/c++/13/array \
+ /usr/include/c++/13/bits/stl_algo.h \
+ /usr/include/c++/13/bits/algorithmfwd.h \
+ /usr/include/c++/13/bits/stl_heap.h \
+ /usr/include/c++/13/bits/uniform_int_dist.h \
+ /usr/include/c++/13/bits/stl_tempbuf.h \
+ /home/antoni/pgk-3d-engine/include/Game/Init.hpp \
+ /home/antoni/pgk-3d-engine/include/ModelEditor/Init.hpp

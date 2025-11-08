@@ -20,7 +20,12 @@ namespace Engine
 
         MeshRepository();
         
+        EngineID loadMeshFromFileWithPreprocessing(const std::string &path, glm::quat rotation);
         EngineID loadMeshFromFile(const std::string &path);
+
+        EngineID loadMeshFromOBJFileWithPreprocessing(const std::string &path, glm::quat rotation);
+        EngineID loadMeshFromOBJFile(const std::string &path);
+
         EngineID loadMesh(const Mesh mesh);
         EngineID loadMeshWithNormals(const Mesh nmesh);
         

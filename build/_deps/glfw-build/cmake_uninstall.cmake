@@ -1,9 +1,9 @@
 
-if (NOT EXISTS "/home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-build/install_manifest.txt")
-    message(FATAL_ERROR "Cannot find install manifest: \"/home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-build/install_manifest.txt\"")
+if (NOT EXISTS "/home/antoni/pgk-3d-engine/build/_deps/glfw-build/install_manifest.txt")
+    message(FATAL_ERROR "Cannot find install manifest: \"/home/antoni/pgk-3d-engine/build/_deps/glfw-build/install_manifest.txt\"")
 endif()
 
-file(READ "/home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-build/install_manifest.txt" files)
+file(READ "/home/antoni/pgk-3d-engine/build/_deps/glfw-build/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 
 foreach (file ${files})

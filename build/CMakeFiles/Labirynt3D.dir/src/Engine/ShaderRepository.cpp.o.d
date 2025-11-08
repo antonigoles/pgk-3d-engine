@@ -1,7 +1,7 @@
 CMakeFiles/Labirynt3D.dir/src/Engine/ShaderRepository.cpp.o: \
- /home/antoni/studia/pgk/pracownia-3/src/Engine/ShaderRepository.cpp \
+ /home/antoni/pgk-3d-engine/src/Engine/ShaderRepository.cpp \
  /usr/include/stdc-predef.h \
- /home/antoni/studia/pgk/pracownia-3/include/Engine/ShaderRepository.hpp \
+ /home/antoni/pgk-3d-engine/include/Engine/ShaderRepository.hpp \
  /usr/include/c++/13/string /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -152,9 +152,9 @@ CMakeFiles/Labirynt3D.dir/src/Engine/ShaderRepository.cpp.o: \
  /usr/include/c++/13/bits/enable_special_members.h \
  /usr/include/c++/13/bits/node_handle.h \
  /usr/include/c++/13/bits/erase_if.h \
- /home/antoni/studia/pgk/pracownia-3/build/_deps/glad-build/include/glad/glad.h \
- /home/antoni/studia/pgk/pracownia-3/build/_deps/glad-build/include/KHR/khrplatform.h \
- /home/antoni/studia/pgk/pracownia-3/include/Engine/Misc/Types.hpp \
+ /home/antoni/pgk-3d-engine/build/_deps/glad-build/include/glad/glad.h \
+ /home/antoni/pgk-3d-engine/build/_deps/glad-build/include/KHR/khrplatform.h \
+ /home/antoni/pgk-3d-engine/include/Engine/Misc/Types.hpp \
  /usr/include/glm/glm.hpp /usr/include/glm/detail/_fixes.hpp \
  /usr/include/c++/13/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
@@ -287,11 +287,17 @@ CMakeFiles/Labirynt3D.dir/src/Engine/ShaderRepository.cpp.o: \
  /usr/include/c++/13/bits/stl_uninitialized.h \
  /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
- /usr/include/c++/13/bits/vector.tcc /usr/include/c++/13/iostream \
+ /usr/include/c++/13/bits/vector.tcc /usr/include/c++/13/functional \
+ /usr/include/c++/13/bits/std_function.h /usr/include/c++/13/typeinfo \
+ /usr/include/c++/13/array /usr/include/c++/13/bits/stl_algo.h \
+ /usr/include/c++/13/bits/algorithmfwd.h \
+ /usr/include/c++/13/bits/stl_heap.h \
+ /usr/include/c++/13/bits/uniform_int_dist.h \
+ /usr/include/c++/13/bits/stl_tempbuf.h /usr/include/c++/13/iostream \
  /usr/include/c++/13/ostream /usr/include/c++/13/ios \
  /usr/include/c++/13/exception /usr/include/c++/13/bits/exception_ptr.h \
  /usr/include/c++/13/bits/cxxabi_init_exception.h \
- /usr/include/c++/13/typeinfo /usr/include/c++/13/bits/nested_exception.h \
+ /usr/include/c++/13/bits/nested_exception.h \
  /usr/include/c++/13/bits/ios_base.h /usr/include/c++/13/ext/atomicity.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \

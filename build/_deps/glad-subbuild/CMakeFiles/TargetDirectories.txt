@@ -1,3 +1,3 @@
-/home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild/CMakeFiles/glad-populate.dir
-/home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild/CMakeFiles/edit_cache.dir
-/home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild/CMakeFiles/rebuild_cache.dir
+/home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/CMakeFiles/glad-populate.dir
+/home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/CMakeFiles/edit_cache.dir
+/home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/CMakeFiles/rebuild_cache.dir

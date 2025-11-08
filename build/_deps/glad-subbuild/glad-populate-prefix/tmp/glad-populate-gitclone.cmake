@@ -3,21 +3,21 @@
 
 cmake_minimum_required(VERSION 3.5)
 
-if(EXISTS "/home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-gitclone-lastrun.txt" AND EXISTS "/home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-gitinfo.txt" AND
-  "/home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-gitclone-lastrun.txt" IS_NEWER_THAN "/home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-gitinfo.txt")
+if(EXISTS "/home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-gitclone-lastrun.txt" AND EXISTS "/home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-gitinfo.txt" AND
+  "/home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-gitclone-lastrun.txt" IS_NEWER_THAN "/home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-gitinfo.txt")
   message(STATUS
     "Avoiding repeated git clone, stamp file is up to date: "
-    "'/home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-gitclone-lastrun.txt'"
+    "'/home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-gitclone-lastrun.txt'"
   )
   return()
 endif()
 
 execute_process(
-  COMMAND ${CMAKE_COMMAND} -E rm -rf "/home/antoni/studia/pgk/pracownia-3/build/_deps/glad-src"
+  COMMAND ${CMAKE_COMMAND} -E rm -rf "/home/antoni/pgk-3d-engine/build/_deps/glad-src"
   RESULT_VARIABLE error_code
 )
 if(error_code)
-  message(FATAL_ERROR "Failed to remove directory: '/home/antoni/studia/pgk/pracownia-3/build/_deps/glad-src'")
+  message(FATAL_ERROR "Failed to remove directory: '/home/antoni/pgk-3d-engine/build/_deps/glad-src'")
 endif()
 
 # try the clone 3 times in case there is an odd git clone issue
@@ -27,7 +27,7 @@ while(error_code AND number_of_tries LESS 3)
   execute_process(
     COMMAND "/usr/bin/git"
             clone --no-checkout --config "advice.detachedHead=false" "https://github.com/Dav1dde/glad.git" "glad-src"
-    WORKING_DIRECTORY "/home/antoni/studia/pgk/pracownia-3/build/_deps"
+    WORKING_DIRECTORY "/home/antoni/pgk-3d-engine/build/_deps"
     RESULT_VARIABLE error_code
   )
   math(EXPR number_of_tries "${number_of_tries} + 1")
@@ -42,7 +42,7 @@ endif()
 execute_process(
   COMMAND "/usr/bin/git"
           checkout "master" --
-  WORKING_DIRECTORY "/home/antoni/studia/pgk/pracownia-3/build/_deps/glad-src"
+  WORKING_DIRECTORY "/home/antoni/pgk-3d-engine/build/_deps/glad-src"
   RESULT_VARIABLE error_code
 )
 if(error_code)
@@ -54,20 +54,20 @@ if(init_submodules)
   execute_process(
     COMMAND "/usr/bin/git" 
             submodule update --recursive --init 
-    WORKING_DIRECTORY "/home/antoni/studia/pgk/pracownia-3/build/_deps/glad-src"
+    WORKING_DIRECTORY "/home/antoni/pgk-3d-engine/build/_deps/glad-src"
     RESULT_VARIABLE error_code
   )
 endif()
 if(error_code)
-  message(FATAL_ERROR "Failed to update submodules in: '/home/antoni/studia/pgk/pracownia-3/build/_deps/glad-src'")
+  message(FATAL_ERROR "Failed to update submodules in: '/home/antoni/pgk-3d-engine/build/_deps/glad-src'")
 endif()
 
 # Complete success, update the script-last-run stamp file:
 #
 execute_process(
-  COMMAND ${CMAKE_COMMAND} -E copy "/home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-gitinfo.txt" "/home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-gitclone-lastrun.txt"
+  COMMAND ${CMAKE_COMMAND} -E copy "/home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-gitinfo.txt" "/home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-gitclone-lastrun.txt"
   RESULT_VARIABLE error_code
 )
 if(error_code)
-  message(FATAL_ERROR "Failed to copy script-last-run stamp file: '/home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-gitclone-lastrun.txt'")
+  message(FATAL_ERROR "Failed to copy script-last-run stamp file: '/home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-gitclone-lastrun.txt'")
 endif()

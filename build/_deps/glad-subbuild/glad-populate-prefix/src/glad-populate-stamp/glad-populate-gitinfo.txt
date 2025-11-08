@@ -3,9 +3,9 @@
 # No other meaning or use of this file is supported.
 
 method=git
-command=/usr/bin/cmake;-P;/home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild/glad-populate-prefix/tmp/glad-populate-gitclone.cmake
-source_dir=/home/antoni/studia/pgk/pracownia-3/build/_deps/glad-src
-work_dir=/home/antoni/studia/pgk/pracownia-3/build/_deps
+command=/usr/bin/cmake;-P;/home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/glad-populate-prefix/tmp/glad-populate-gitclone.cmake
+source_dir=/home/antoni/pgk-3d-engine/build/_deps/glad-src
+work_dir=/home/antoni/pgk-3d-engine/build/_deps
 repository=https://github.com/Dav1dde/glad.git
 remote=origin
 init_submodules=TRUE

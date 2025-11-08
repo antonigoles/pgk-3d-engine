@@ -3,6 +3,7 @@
 #include <iostream>
 #include <glm/gtc/quaternion.hpp>
 #include <glm/gtx/quaternion.hpp>
+#include <Engine/VolumetricParticles.hpp>
 
 namespace Engine {
     Window::Window(int v_width, int v_height) : v_width(v_width), v_height(v_height) 
@@ -18,7 +19,7 @@ namespace Engine {
         static bool stop = false;
         glm::mat4 projection = glm::perspective(
             glm::radians(this->camera->getFOV() / 2.0f), 
-            ((float)this->v_width) / ((float)this->v_height), 0.1f, 100.0f
+            ((float)this->v_width) / ((float)this->v_height), 0.1f, 500.0f
         );
         
         if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS && releaseStopButton) {
@@ -31,6 +32,12 @@ namespace Engine {
         }
 
         this->camera->handleMouseInput(window, deltaTime);
+        this->player->handleKeyboardInput(window, this->camera, deltaTime);
+        this->camera->syncCameraAndTarget(player->transform);
+
+        this->skybox->transform.setPosition(
+            this->camera->transform.getPosition()
+        );
         
         float i = 0;
         for (auto shaderIdToObjectsPair : shaderRepository.shaderToObjectIDsMap) {
@@ -39,26 +46,14 @@ namespace Engine {
             shaderRepository.setUniformMat4("projection", projection);
             shaderRepository.setUniformMat4("view", this->camera->getViewMatrix());
             shaderRepository.setUniformVec3("viewPos", this->camera->transform.getPosition());
+            shaderRepository.setUniformVec3("lightPos", glm::vec3(0.0f, 0.0f, -150.0f));
 
             for (EngineID engineID : shaderIdToObjectsPair.second) {
                 i++;
                 GameObject* gameObject = gameObjectRepository.getGameObject(engineID);
+                if (!gameObject->isVisible()) continue;
 
-                if (gameObject->label != "lightSource" && !stop) {
-                    gameObject->transform.setRotation(
-                        glm::angleAxis(deltaTime * i/10, glm::vec3(0.0f, 1.0f, 0.0f)) *
-                        gameObject->transform.getRotation()
-                    );
-
-                    gameObject->transform.setPosition(
-                        glm::vec3(
-                            gameObject->transform.getPosition().x, 
-                            sin(glfwGetTime() + i), 
-                            gameObject->transform.getPosition().z
-                        )
-                    );
-                }
-                
+                gameObject->callUpdateFunctions(deltaTime);
 
                 EngineID meshID = meshRepository.getMeshIDByGameObject(gameObject);
                 shaderRepository.setUniformMat4("model", gameObject->transform.getModelMatrix());
@@ -68,9 +63,38 @@ namespace Engine {
                 glDrawArrays(GL_TRIANGLES, 0, meshRepository.getMeshSize(meshID));
             }
         }
+
+        // render particles
+        auto sphericalGenerators = volumetricParticleGeneratorRepository.getAllSphericalGenerators();
+        for (auto generator : sphericalGenerators) {
+            volumetricParticleGeneratorRepository.stepSphericalGenerator(generator->generatorID, deltaTime);
+            // draw particle
+            // 1. Set shader
+            shaderRepository.useShaderWithDataByID(generator->shaderID, {}, {});
+            shaderRepository.setUniformMat4("projection", projection);
+            shaderRepository.setUniformMat4("view", this->camera->getViewMatrix());
+            shaderRepository.setUniformVec3("viewPos", this->camera->transform.getPosition());
+
+            // 2. load mesh and draw all particles
+            // TODO: Maybe rewrite this with instancing in mind, might be simple 
+            for (auto particle : generator->particlePool) {
+                shaderRepository.setUniformMat4("model", particle->transform.getModelMatrix());
+                EngineID meshVAO = meshRepository.getMeshVAO(generator->particleMeshId);
+                glBindVertexArray(meshVAO);
+                glDrawArrays(GL_TRIANGLES, 0, meshRepository.getMeshSize(generator->particleMeshId));
+            }
+        }
     };
 
     void Window::setCamera(Camera *camera) {
         this->camera = camera;
     };
+
+    void Window::setPlayer(Player *player) {
+        this->player = player;
+    };
+
+    void Window::setSkybox(GameObject *skybox) {
+        this->skybox = skybox;
+    }
 };

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild
+CMAKE_SOURCE_DIR = /home/antoni/pgk-3d-engine/build/_deps/glad-subbuild
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild
+CMAKE_BINARY_DIR = /home/antoni/pgk-3d-engine/build/_deps/glad-subbuild
 
 # Utility rule file for glad-populate.
 
@@ -77,60 +77,60 @@ CMakeFiles/glad-populate-complete: glad-populate-prefix/src/glad-populate-stamp/
 CMakeFiles/glad-populate-complete: glad-populate-prefix/src/glad-populate-stamp/glad-populate-build
 CMakeFiles/glad-populate-complete: glad-populate-prefix/src/glad-populate-stamp/glad-populate-install
 CMakeFiles/glad-populate-complete: glad-populate-prefix/src/glad-populate-stamp/glad-populate-test
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Completed 'glad-populate'"
-	/usr/bin/cmake -E make_directory /home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild/CMakeFiles
-	/usr/bin/cmake -E touch /home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild/CMakeFiles/glad-populate-complete
-	/usr/bin/cmake -E touch /home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-done
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Completed 'glad-populate'"
+	/usr/bin/cmake -E make_directory /home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/CMakeFiles
+	/usr/bin/cmake -E touch /home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/CMakeFiles/glad-populate-complete
+	/usr/bin/cmake -E touch /home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-done
 
 glad-populate-prefix/src/glad-populate-stamp/glad-populate-update:
 .PHONY : glad-populate-prefix/src/glad-populate-stamp/glad-populate-update
 
 glad-populate-prefix/src/glad-populate-stamp/glad-populate-build: glad-populate-prefix/src/glad-populate-stamp/glad-populate-configure
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "No build step for 'glad-populate'"
-	cd /home/antoni/studia/pgk/pracownia-3/build/_deps/glad-build && /usr/bin/cmake -E echo_append
-	cd /home/antoni/studia/pgk/pracownia-3/build/_deps/glad-build && /usr/bin/cmake -E touch /home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "No build step for 'glad-populate'"
+	cd /home/antoni/pgk-3d-engine/build/_deps/glad-build && /usr/bin/cmake -E echo_append
+	cd /home/antoni/pgk-3d-engine/build/_deps/glad-build && /usr/bin/cmake -E touch /home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-build
 
 glad-populate-prefix/src/glad-populate-stamp/glad-populate-configure: glad-populate-prefix/tmp/glad-populate-cfgcmd.txt
 glad-populate-prefix/src/glad-populate-stamp/glad-populate-configure: glad-populate-prefix/src/glad-populate-stamp/glad-populate-patch
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "No configure step for 'glad-populate'"
-	cd /home/antoni/studia/pgk/pracownia-3/build/_deps/glad-build && /usr/bin/cmake -E echo_append
-	cd /home/antoni/studia/pgk/pracownia-3/build/_deps/glad-build && /usr/bin/cmake -E touch /home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-configure
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "No configure step for 'glad-populate'"
+	cd /home/antoni/pgk-3d-engine/build/_deps/glad-build && /usr/bin/cmake -E echo_append
+	cd /home/antoni/pgk-3d-engine/build/_deps/glad-build && /usr/bin/cmake -E touch /home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-configure
 
 glad-populate-prefix/src/glad-populate-stamp/glad-populate-download: glad-populate-prefix/src/glad-populate-stamp/glad-populate-gitinfo.txt
 glad-populate-prefix/src/glad-populate-stamp/glad-populate-download: glad-populate-prefix/src/glad-populate-stamp/glad-populate-mkdir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Performing download step (git clone) for 'glad-populate'"
-	cd /home/antoni/studia/pgk/pracownia-3/build/_deps && /usr/bin/cmake -P /home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild/glad-populate-prefix/tmp/glad-populate-gitclone.cmake
-	cd /home/antoni/studia/pgk/pracownia-3/build/_deps && /usr/bin/cmake -E touch /home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-download
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Performing download step (git clone) for 'glad-populate'"
+	cd /home/antoni/pgk-3d-engine/build/_deps && /usr/bin/cmake -P /home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/glad-populate-prefix/tmp/glad-populate-gitclone.cmake
+	cd /home/antoni/pgk-3d-engine/build/_deps && /usr/bin/cmake -E touch /home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-download
 
 glad-populate-prefix/src/glad-populate-stamp/glad-populate-install: glad-populate-prefix/src/glad-populate-stamp/glad-populate-build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "No install step for 'glad-populate'"
-	cd /home/antoni/studia/pgk/pracownia-3/build/_deps/glad-build && /usr/bin/cmake -E echo_append
-	cd /home/antoni/studia/pgk/pracownia-3/build/_deps/glad-build && /usr/bin/cmake -E touch /home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-install
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "No install step for 'glad-populate'"
+	cd /home/antoni/pgk-3d-engine/build/_deps/glad-build && /usr/bin/cmake -E echo_append
+	cd /home/antoni/pgk-3d-engine/build/_deps/glad-build && /usr/bin/cmake -E touch /home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-install
 
 glad-populate-prefix/src/glad-populate-stamp/glad-populate-mkdir:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Creating directories for 'glad-populate'"
-	/usr/bin/cmake -Dcfgdir= -P /home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild/glad-populate-prefix/tmp/glad-populate-mkdirs.cmake
-	/usr/bin/cmake -E touch /home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-mkdir
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Creating directories for 'glad-populate'"
+	/usr/bin/cmake -Dcfgdir= -P /home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/glad-populate-prefix/tmp/glad-populate-mkdirs.cmake
+	/usr/bin/cmake -E touch /home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-mkdir
 
 glad-populate-prefix/src/glad-populate-stamp/glad-populate-patch: glad-populate-prefix/src/glad-populate-stamp/glad-populate-patch-info.txt
 glad-populate-prefix/src/glad-populate-stamp/glad-populate-patch: glad-populate-prefix/src/glad-populate-stamp/glad-populate-update
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "No patch step for 'glad-populate'"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "No patch step for 'glad-populate'"
 	/usr/bin/cmake -E echo_append
-	/usr/bin/cmake -E touch /home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-patch
+	/usr/bin/cmake -E touch /home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-patch
 
 glad-populate-prefix/src/glad-populate-stamp/glad-populate-update:
 .PHONY : glad-populate-prefix/src/glad-populate-stamp/glad-populate-update
 
 glad-populate-prefix/src/glad-populate-stamp/glad-populate-test: glad-populate-prefix/src/glad-populate-stamp/glad-populate-install
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "No test step for 'glad-populate'"
-	cd /home/antoni/studia/pgk/pracownia-3/build/_deps/glad-build && /usr/bin/cmake -E echo_append
-	cd /home/antoni/studia/pgk/pracownia-3/build/_deps/glad-build && /usr/bin/cmake -E touch /home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-test
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "No test step for 'glad-populate'"
+	cd /home/antoni/pgk-3d-engine/build/_deps/glad-build && /usr/bin/cmake -E echo_append
+	cd /home/antoni/pgk-3d-engine/build/_deps/glad-build && /usr/bin/cmake -E touch /home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-test
 
 glad-populate-prefix/src/glad-populate-stamp/glad-populate-update: glad-populate-prefix/tmp/glad-populate-gitupdate.cmake
 glad-populate-prefix/src/glad-populate-stamp/glad-populate-update: glad-populate-prefix/src/glad-populate-stamp/glad-populate-update-info.txt
 glad-populate-prefix/src/glad-populate-stamp/glad-populate-update: glad-populate-prefix/src/glad-populate-stamp/glad-populate-download
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Performing update step for 'glad-populate'"
-	cd /home/antoni/studia/pgk/pracownia-3/build/_deps/glad-src && /usr/bin/cmake -Dcan_fetch=YES -P /home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild/glad-populate-prefix/tmp/glad-populate-gitupdate.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Performing update step for 'glad-populate'"
+	cd /home/antoni/pgk-3d-engine/build/_deps/glad-src && /usr/bin/cmake -Dcan_fetch=YES -P /home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/glad-populate-prefix/tmp/glad-populate-gitupdate.cmake
 
 glad-populate: CMakeFiles/glad-populate
 glad-populate: CMakeFiles/glad-populate-complete
@@ -154,6 +154,6 @@ CMakeFiles/glad-populate.dir/clean:
 .PHONY : CMakeFiles/glad-populate.dir/clean
 
 CMakeFiles/glad-populate.dir/depend:
-	cd /home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild /home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild /home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild /home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild /home/antoni/studia/pgk/pracownia-3/build/_deps/glad-subbuild/CMakeFiles/glad-populate.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/antoni/pgk-3d-engine/build/_deps/glad-subbuild && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/antoni/pgk-3d-engine/build/_deps/glad-subbuild /home/antoni/pgk-3d-engine/build/_deps/glad-subbuild /home/antoni/pgk-3d-engine/build/_deps/glad-subbuild /home/antoni/pgk-3d-engine/build/_deps/glad-subbuild /home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/CMakeFiles/glad-populate.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/glad-populate.dir/depend
 

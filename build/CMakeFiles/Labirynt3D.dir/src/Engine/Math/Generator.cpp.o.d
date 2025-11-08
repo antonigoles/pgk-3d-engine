@@ -1,7 +1,7 @@
 CMakeFiles/Labirynt3D.dir/src/Engine/Math/Generator.cpp.o: \
- /home/antoni/studia/pgk/pracownia-3/src/Engine/Math/Generator.cpp \
+ /home/antoni/pgk-3d-engine/src/Engine/Math/Generator.cpp \
  /usr/include/stdc-predef.h \
- /home/antoni/studia/pgk/pracownia-3/include/Engine/Misc/Types.hpp \
+ /home/antoni/pgk-3d-engine/include/Engine/Misc/Types.hpp \
  /usr/include/glm/glm.hpp /usr/include/glm/detail/_fixes.hpp \
  /usr/include/c++/13/cmath /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
@@ -245,10 +245,104 @@ CMakeFiles/Labirynt3D.dir/src/Engine/Math/Generator.cpp.o: \
  /usr/include/c++/13/bits/ranges_util.h \
  /usr/include/c++/13/bits/ranges_base.h \
  /usr/include/c++/13/bits/max_size_type.h /usr/include/c++/13/numbers \
- /usr/include/glm/ext/quaternion_trigonometric.hpp \
+ /usr/include/c++/13/functional /usr/include/c++/13/bits/std_function.h \
+ /usr/include/c++/13/typeinfo /usr/include/c++/13/unordered_map \
+ /usr/include/c++/13/bits/unordered_map.h \
+ /usr/include/c++/13/bits/hashtable.h \
+ /usr/include/c++/13/bits/hashtable_policy.h \
+ /usr/include/c++/13/ext/aligned_buffer.h \
+ /usr/include/c++/13/bits/enable_special_members.h \
+ /usr/include/c++/13/bits/node_handle.h \
+ /usr/include/c++/13/bits/erase_if.h /usr/include/c++/13/array \
+ /usr/include/c++/13/bits/stl_algo.h \
+ /usr/include/c++/13/bits/algorithmfwd.h \
+ /usr/include/c++/13/bits/stl_heap.h \
+ /usr/include/c++/13/bits/uniform_int_dist.h \
+ /usr/include/c++/13/bits/stl_tempbuf.h /usr/include/c++/13/cstdlib \
+ /usr/include/glm/gtx/hash.hpp /usr/include/glm/gtc/vec1.hpp \
+ /usr/include/glm/ext/vector_bool1.hpp \
+ /usr/include/glm/ext/vector_bool1_precision.hpp \
+ /usr/include/glm/ext/vector_float1.hpp \
+ /usr/include/glm/ext/vector_float1_precision.hpp \
+ /usr/include/glm/ext/vector_double1.hpp \
+ /usr/include/glm/ext/vector_double1_precision.hpp \
+ /usr/include/glm/ext/vector_int1.hpp \
+ /usr/include/glm/ext/vector_int1_sized.hpp \
+ /usr/include/glm/ext/vector_uint1.hpp \
+ /usr/include/glm/ext/vector_uint1_sized.hpp \
+ /usr/include/glm/gtc/quaternion.hpp /usr/include/glm/gtc/constants.hpp \
  /usr/include/glm/ext/scalar_constants.hpp \
  /usr/include/glm/ext/scalar_constants.inl \
+ /usr/include/glm/gtc/constants.inl \
+ /usr/include/glm/gtc/matrix_transform.hpp \
+ /usr/include/glm/ext/matrix_projection.hpp \
+ /usr/include/glm/ext/matrix_projection.inl \
+ /usr/include/glm/ext/matrix_clip_space.hpp \
+ /usr/include/glm/ext/matrix_clip_space.inl \
+ /usr/include/glm/ext/matrix_transform.hpp \
+ /usr/include/glm/ext/matrix_transform.inl \
+ /usr/include/glm/gtc/matrix_transform.inl \
  /usr/include/glm/ext/vector_relational.hpp \
  /usr/include/glm/ext/vector_relational.inl \
  /usr/include/glm/detail/type_float.hpp \
- /usr/include/glm/ext/quaternion_trigonometric.inl
+ /usr/include/glm/ext/quaternion_common.hpp \
+ /usr/include/glm/ext/quaternion_geometric.hpp \
+ /usr/include/glm/ext/quaternion_geometric.inl \
+ /usr/include/glm/ext/quaternion_common.inl \
+ /usr/include/glm/ext/quaternion_float.hpp \
+ /usr/include/glm/detail/type_quat.hpp \
+ /usr/include/glm/ext/quaternion_relational.hpp \
+ /usr/include/glm/ext/quaternion_relational.inl \
+ /usr/include/glm/detail/type_quat.inl \
+ /usr/include/glm/ext/quaternion_float_precision.hpp \
+ /usr/include/glm/ext/quaternion_double.hpp \
+ /usr/include/glm/ext/quaternion_double_precision.hpp \
+ /usr/include/glm/ext/quaternion_trigonometric.hpp \
+ /usr/include/glm/ext/quaternion_trigonometric.inl \
+ /usr/include/glm/ext/quaternion_transform.hpp \
+ /usr/include/glm/ext/quaternion_transform.inl \
+ /usr/include/glm/gtc/quaternion.inl /usr/include/glm/gtc/epsilon.hpp \
+ /usr/include/glm/detail/setup.hpp /usr/include/glm/gtc/epsilon.inl \
+ /usr/include/glm/gtx/dual_quaternion.hpp \
+ /usr/include/glm/gtx/dual_quaternion.inl /usr/include/glm/gtx/hash.inl \
+ /usr/include/c++/13/numeric /usr/include/c++/13/bits/stl_numeric.h \
+ /usr/include/c++/13/pstl/glue_numeric_defs.h \
+ /usr/include/c++/13/pstl/execution_defs.h /usr/include/c++/13/algorithm \
+ /usr/include/c++/13/bits/ranges_algo.h \
+ /usr/include/c++/13/bits/ranges_algobase.h \
+ /usr/include/c++/13/pstl/glue_algorithm_defs.h \
+ /usr/include/c++/13/random /usr/include/c++/13/string \
+ /usr/include/c++/13/bits/stringfwd.h \
+ /usr/include/c++/13/bits/char_traits.h \
+ /usr/include/c++/13/bits/postypes.h /usr/include/c++/13/cwchar \
+ /usr/include/wchar.h /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
+ /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+ /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+ /usr/include/c++/13/bits/localefwd.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h \
+ /usr/include/c++/13/clocale /usr/include/locale.h \
+ /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/13/iosfwd \
+ /usr/include/c++/13/cctype /usr/include/ctype.h \
+ /usr/include/c++/13/bits/ostream_insert.h \
+ /usr/include/c++/13/bits/cxxabi_forced.h \
+ /usr/include/c++/13/bits/basic_string.h /usr/include/c++/13/string_view \
+ /usr/include/c++/13/bits/string_view.tcc \
+ /usr/include/c++/13/ext/string_conversions.h /usr/include/c++/13/cstdio \
+ /usr/include/stdio.h /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+ /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
+ /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+ /usr/include/c++/13/cerrno /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
+ /usr/include/c++/13/bits/charconv.h \
+ /usr/include/c++/13/bits/basic_string.tcc \
+ /usr/include/c++/13/bits/random.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/opt_random.h \
+ /usr/include/c++/13/bits/random.tcc

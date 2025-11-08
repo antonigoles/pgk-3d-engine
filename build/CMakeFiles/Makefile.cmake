@@ -7,7 +7,7 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/home/antoni/studia/pgk/pracownia-3/CMakeLists.txt"
+  "/home/antoni/pgk-3d-engine/CMakeLists.txt"
   "CMakeFiles/3.28.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.28.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.28.3/CMakeSystem.cmake"
@@ -44,6 +44,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.28/Modules/FetchContent.cmake"
   "/usr/share/cmake-3.28/Modules/FetchContent/CMakeLists.cmake.in"
   "/usr/share/cmake-3.28/Modules/FindDoxygen.cmake"
+  "/usr/share/cmake-3.28/Modules/FindFontconfig.cmake"
+  "/usr/share/cmake-3.28/Modules/FindFreetype.cmake"
   "/usr/share/cmake-3.28/Modules/FindGit.cmake"
   "/usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake"
   "/usr/share/cmake-3.28/Modules/FindPackageMessage.cmake"
@@ -60,6 +62,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake"
   "/usr/share/cmake-3.28/Modules/Platform/Linux.cmake"
   "/usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake"
+  "/usr/share/cmake-3.28/Modules/SelectLibraryConfigurations.cmake"
   "/usr/share/cmake-3.28/Modules/WriteBasicConfigVersionFile.cmake"
   )
 

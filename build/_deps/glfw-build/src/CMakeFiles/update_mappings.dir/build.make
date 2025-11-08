@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/antoni/studia/pgk/pracownia-3
+CMAKE_SOURCE_DIR = /home/antoni/pgk-3d-engine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/antoni/studia/pgk/pracownia-3/build
+CMAKE_BINARY_DIR = /home/antoni/pgk-3d-engine/build
 
 # Utility rule file for update_mappings.
 
@@ -67,8 +67,8 @@ include _deps/glfw-build/src/CMakeFiles/update_mappings.dir/compiler_depend.make
 include _deps/glfw-build/src/CMakeFiles/update_mappings.dir/progress.make
 
 _deps/glfw-build/src/CMakeFiles/update_mappings:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/antoni/studia/pgk/pracownia-3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Updating gamepad mappings from upstream repository"
-	cd /home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-src/src && /usr/bin/cmake -P /home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-src/CMake/GenerateMappings.cmake mappings.h.in mappings.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/antoni/pgk-3d-engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Updating gamepad mappings from upstream repository"
+	cd /home/antoni/pgk-3d-engine/build/_deps/glfw-src/src && /usr/bin/cmake -P /home/antoni/pgk-3d-engine/build/_deps/glfw-src/CMake/GenerateMappings.cmake mappings.h.in mappings.h
 
 update_mappings: _deps/glfw-build/src/CMakeFiles/update_mappings
 update_mappings: _deps/glfw-build/src/CMakeFiles/update_mappings.dir/build.make
@@ -79,10 +79,10 @@ _deps/glfw-build/src/CMakeFiles/update_mappings.dir/build: update_mappings
 .PHONY : _deps/glfw-build/src/CMakeFiles/update_mappings.dir/build
 
 _deps/glfw-build/src/CMakeFiles/update_mappings.dir/clean:
-	cd /home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-build/src && $(CMAKE_COMMAND) -P CMakeFiles/update_mappings.dir/cmake_clean.cmake
+	cd /home/antoni/pgk-3d-engine/build/_deps/glfw-build/src && $(CMAKE_COMMAND) -P CMakeFiles/update_mappings.dir/cmake_clean.cmake
 .PHONY : _deps/glfw-build/src/CMakeFiles/update_mappings.dir/clean
 
 _deps/glfw-build/src/CMakeFiles/update_mappings.dir/depend:
-	cd /home/antoni/studia/pgk/pracownia-3/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/antoni/studia/pgk/pracownia-3 /home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-src/src /home/antoni/studia/pgk/pracownia-3/build /home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-build/src /home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-build/src/CMakeFiles/update_mappings.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/antoni/pgk-3d-engine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/antoni/pgk-3d-engine /home/antoni/pgk-3d-engine/build/_deps/glfw-src/src /home/antoni/pgk-3d-engine/build /home/antoni/pgk-3d-engine/build/_deps/glfw-build/src /home/antoni/pgk-3d-engine/build/_deps/glfw-build/src/CMakeFiles/update_mappings.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : _deps/glfw-build/src/CMakeFiles/update_mappings.dir/depend
 

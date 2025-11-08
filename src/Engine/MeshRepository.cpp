@@ -7,7 +7,7 @@
 #include <iostream>
 #include <glm/glm.hpp>
 #include "glm/gtx/hash.hpp"
-
+#include <Engine/Math/Math.hpp>
 #include <glad/glad.h>
 
 
@@ -19,7 +19,16 @@ namespace Engine
         return this->meshCounter++;
     };
 
-    EngineID MeshRepository::loadMeshFromFile(const std::string &path) {
+    EngineID MeshRepository::loadMeshFromOBJFileWithPreprocessing(const std::string &path, glm::quat rotation) {
+        // TODO: Either implement or use Assimp
+        return {};
+    };
+
+    EngineID MeshRepository::loadMeshFromOBJFile(const std::string &path) {
+        return this->loadMeshFromOBJFileWithPreprocessing(path, {0.0f, 1.0f, 0.0f, 0.0f});
+    };
+
+    EngineID MeshRepository::loadMeshFromFileWithPreprocessing(const std::string &path, glm::quat rotation) {
         std::ifstream file(path);
         if (!file.is_open())
             throw std::runtime_error(std::string("Could not open mesh file: ") + path);
@@ -95,7 +104,12 @@ namespace Engine
         }
         
         file.close();
+        Engine::Math::meshRotate(mesh, rotation);
         return this->loadMesh(mesh);
+    };  
+
+    EngineID MeshRepository::loadMeshFromFile(const std::string &path) {
+        return this->loadMeshFromFileWithPreprocessing(path, {0.0f, 1.0f, 0.0f, 0.0f});
     };
 
     EngineID MeshRepository::loadMeshWithNormals(const Mesh nmesh) {

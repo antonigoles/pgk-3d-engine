@@ -1,8 +1,8 @@
 _deps/glfw-build/src/CMakeFiles/glfw.dir/wl_window.c.o: \
- /home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-src/src/wl_window.c \
+ /home/antoni/pgk-3d-engine/build/_deps/glfw-src/src/wl_window.c \
  /usr/include/stdc-predef.h \
- /home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-src/src/internal.h \
- /home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-src/src/../include/GLFW/glfw3.h \
+ /home/antoni/pgk-3d-engine/build/_deps/glfw-src/src/internal.h \
+ /home/antoni/pgk-3d-engine/build/_deps/glfw-src/src/../include/GLFW/glfw3.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
@@ -20,9 +20,9 @@ _deps/glfw-build/src/CMakeFiles/glfw.dir/wl_window.c.o: \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
- /home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-src/src/platform.h \
- /home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-src/src/null_platform.h \
- /home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-src/src/wl_platform.h \
+ /home/antoni/pgk-3d-engine/build/_deps/glfw-src/src/platform.h \
+ /home/antoni/pgk-3d-engine/build/_deps/glfw-src/src/null_platform.h \
+ /home/antoni/pgk-3d-engine/build/_deps/glfw-src/src/wl_platform.h \
  /usr/include/wayland-client-core.h /usr/include/wayland-util.h \
  /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
@@ -50,8 +50,8 @@ _deps/glfw-build/src/CMakeFiles/glfw.dir/wl_window.c.o: \
  /usr/include/xkbcommon/xkbcommon-compat.h \
  /usr/include/xkbcommon/xkbcommon-compose.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
- /home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-src/src/xkb_unicode.h \
- /home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-src/src/posix_poll.h \
+ /home/antoni/pgk-3d-engine/build/_deps/glfw-src/src/xkb_unicode.h \
+ /home/antoni/pgk-3d-engine/build/_deps/glfw-src/src/posix_poll.h \
  /usr/include/poll.h /usr/include/x86_64-linux-gnu/sys/poll.h \
  /usr/include/x86_64-linux-gnu/bits/poll.h \
  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
@@ -59,7 +59,7 @@ _deps/glfw-build/src/CMakeFiles/glfw.dir/wl_window.c.o: \
  /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endianness.h \
  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
- /home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-src/src/x11_platform.h \
+ /home/antoni/pgk-3d-engine/build/_deps/glfw-src/src/x11_platform.h \
  /usr/include/unistd.h /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
  /usr/include/x86_64-linux-gnu/bits/environments.h \
  /usr/include/x86_64-linux-gnu/bits/confname.h \
@@ -118,8 +118,8 @@ _deps/glfw-build/src/CMakeFiles/glfw.dir/wl_window.c.o: \
  /usr/include/X11/extensions/xfixeswire.h \
  /usr/include/X11/extensions/shape.h \
  /usr/include/X11/extensions/shapeconst.h \
- /home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-src/src/null_joystick.h \
- /home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-src/src/linux_joystick.h \
+ /home/antoni/pgk-3d-engine/build/_deps/glfw-src/src/null_joystick.h \
+ /home/antoni/pgk-3d-engine/build/_deps/glfw-src/src/linux_joystick.h \
  /usr/include/linux/input.h /usr/include/x86_64-linux-gnu/sys/time.h \
  /usr/include/x86_64-linux-gnu/sys/ioctl.h \
  /usr/include/x86_64-linux-gnu/bits/ioctls.h \
@@ -139,7 +139,7 @@ _deps/glfw-build/src/CMakeFiles/glfw.dir/wl_window.c.o: \
  /usr/include/asm-generic/posix_types.h \
  /usr/include/linux/input-event-codes.h /usr/include/linux/limits.h \
  /usr/include/regex.h \
- /home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-src/src/posix_thread.h \
+ /home/antoni/pgk-3d-engine/build/_deps/glfw-src/src/posix_thread.h \
  /usr/include/pthread.h /usr/include/sched.h \
  /usr/include/x86_64-linux-gnu/bits/sched.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
@@ -153,8 +153,8 @@ _deps/glfw-build/src/CMakeFiles/glfw.dir/wl_window.c.o: \
  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
- /home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-src/src/posix_time.h \
- /home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-src/src/../include/GLFW/glfw3native.h \
+ /home/antoni/pgk-3d-engine/build/_deps/glfw-src/src/posix_time.h \
+ /home/antoni/pgk-3d-engine/build/_deps/glfw-src/src/../include/GLFW/glfw3native.h \
  /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/waitflags.h \
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h /usr/include/alloca.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/errno.h \
@@ -177,14 +177,14 @@ _deps/glfw-build/src/CMakeFiles/glfw.dir/wl_window.c.o: \
  /usr/include/x86_64-linux-gnu/sys/timerfd.h \
  /usr/include/x86_64-linux-gnu/bits/timerfd.h \
  /usr/include/linux/input-event-codes.h \
- /home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-build/src/wayland-client-protocol.h \
+ /home/antoni/pgk-3d-engine/build/_deps/glfw-build/src/wayland-client-protocol.h \
  /usr/include/wayland-client.h /usr/include/wayland-client-core.h \
  /usr/include/wayland-client-protocol.h \
- /home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-build/src/xdg-shell-client-protocol.h \
- /home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-build/src/xdg-decoration-unstable-v1-client-protocol.h \
- /home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-build/src/viewporter-client-protocol.h \
- /home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-build/src/relative-pointer-unstable-v1-client-protocol.h \
- /home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-build/src/pointer-constraints-unstable-v1-client-protocol.h \
- /home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-build/src/xdg-activation-v1-client-protocol.h \
- /home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-build/src/idle-inhibit-unstable-v1-client-protocol.h \
- /home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-build/src/fractional-scale-v1-client-protocol.h
+ /home/antoni/pgk-3d-engine/build/_deps/glfw-build/src/xdg-shell-client-protocol.h \
+ /home/antoni/pgk-3d-engine/build/_deps/glfw-build/src/xdg-decoration-unstable-v1-client-protocol.h \
+ /home/antoni/pgk-3d-engine/build/_deps/glfw-build/src/viewporter-client-protocol.h \
+ /home/antoni/pgk-3d-engine/build/_deps/glfw-build/src/relative-pointer-unstable-v1-client-protocol.h \
+ /home/antoni/pgk-3d-engine/build/_deps/glfw-build/src/pointer-constraints-unstable-v1-client-protocol.h \
+ /home/antoni/pgk-3d-engine/build/_deps/glfw-build/src/xdg-activation-v1-client-protocol.h \
+ /home/antoni/pgk-3d-engine/build/_deps/glfw-build/src/idle-inhibit-unstable-v1-client-protocol.h \
+ /home/antoni/pgk-3d-engine/build/_deps/glfw-build/src/fractional-scale-v1-client-protocol.h

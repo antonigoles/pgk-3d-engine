@@ -1,4 +1,4 @@
-# Install script for directory: /home/antoni/studia/pgk/pracownia-3
+# Install script for directory: /home/antoni/pgk-3d-engine
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Debug")
+    set(CMAKE_INSTALL_CONFIG_NAME "")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -44,12 +44,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-build/cmake_install.cmake")
+  include("/home/antoni/pgk-3d-engine/build/_deps/glfw-build/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/antoni/studia/pgk/pracownia-3/build/_deps/glad-build/cmake_install.cmake")
+  include("/home/antoni/pgk-3d-engine/build/_deps/glad-build/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -60,5 +60,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/antoni/studia/pgk/pracownia-3/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/antoni/pgk-3d-engine/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

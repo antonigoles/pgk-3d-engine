@@ -1,10 +1,10 @@
 CMakeFiles/Labirynt3D.dir/src/Engine/Window.cpp.o: \
- /home/antoni/studia/pgk/pracownia-3/src/Engine/Window.cpp \
+ /home/antoni/pgk-3d-engine/src/Engine/Window.cpp \
  /usr/include/stdc-predef.h \
- /home/antoni/studia/pgk/pracownia-3/include/Engine/Window.hpp \
- /home/antoni/studia/pgk/pracownia-3/include/OpenGL.hpp \
- /home/antoni/studia/pgk/pracownia-3/build/_deps/glad-build/include/glad/glad.h \
- /home/antoni/studia/pgk/pracownia-3/build/_deps/glad-build/include/KHR/khrplatform.h \
+ /home/antoni/pgk-3d-engine/include/Engine/Window.hpp \
+ /home/antoni/pgk-3d-engine/include/OpenGL.hpp \
+ /home/antoni/pgk-3d-engine/build/_deps/glad-build/include/glad/glad.h \
+ /home/antoni/pgk-3d-engine/build/_deps/glad-build/include/KHR/khrplatform.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -21,7 +21,7 @@ CMakeFiles/Labirynt3D.dir/src/Engine/Window.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
- /home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-src/include/GLFW/glfw3.h \
+ /home/antoni/pgk-3d-engine/build/_deps/glfw-src/include/GLFW/glfw3.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
  /usr/include/glm/glm.hpp /usr/include/glm/detail/_fixes.hpp \
  /usr/include/c++/13/cmath /usr/include/c++/13/bits/requires_hosted.h \
@@ -271,12 +271,19 @@ CMakeFiles/Labirynt3D.dir/src/Engine/Window.cpp.o: \
  /usr/include/glm/ext/vector_uint1.hpp \
  /usr/include/glm/ext/vector_uint1_sized.hpp /usr/include/c++/13/cstring \
  /usr/include/string.h /usr/include/strings.h \
- /usr/include/glm/gtc/type_ptr.inl \
- /home/antoni/studia/pgk/pracownia-3/include/Engine/Camera.hpp \
- /home/antoni/studia/pgk/pracownia-3/include/Engine/Math/Transform.hpp \
- /home/antoni/studia/pgk/pracownia-3/include/Engine/Misc/Monoliths.hpp \
- /home/antoni/studia/pgk/pracownia-3/include/Engine/GameObjectRepository.hpp \
- /home/antoni/studia/pgk/pracownia-3/include/Engine/Misc/Types.hpp \
+ /usr/include/glm/gtc/type_ptr.inl /usr/include/glm/gtx/norm.hpp \
+ /usr/include/glm/gtx/quaternion.hpp \
+ /usr/include/glm/ext/quaternion_exponential.hpp \
+ /usr/include/glm/ext/quaternion_exponential.inl \
+ /usr/include/glm/gtx/quaternion.inl \
+ /usr/include/glm/gtx/component_wise.hpp \
+ /usr/include/glm/detail/setup.hpp \
+ /usr/include/glm/gtx/component_wise.inl /usr/include/glm/gtx/norm.inl \
+ /home/antoni/pgk-3d-engine/include/Engine/Camera.hpp \
+ /home/antoni/pgk-3d-engine/include/Engine/Math/Transform.hpp \
+ /home/antoni/pgk-3d-engine/include/Engine/Player.hpp \
+ /home/antoni/pgk-3d-engine/include/Engine/GameObject.hpp \
+ /home/antoni/pgk-3d-engine/include/Engine/Misc/Types.hpp \
  /usr/include/c++/13/vector /usr/include/c++/13/bits/allocator.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
  /usr/include/c++/13/bits/new_allocator.h \
@@ -300,7 +307,20 @@ CMakeFiles/Labirynt3D.dir/src/Engine/Window.cpp.o: \
  /usr/include/c++/13/bits/ranges_util.h \
  /usr/include/c++/13/bits/ranges_base.h \
  /usr/include/c++/13/bits/max_size_type.h /usr/include/c++/13/numbers \
- /home/antoni/studia/pgk/pracownia-3/include/Engine/GameObject.hpp \
+ /usr/include/c++/13/functional /usr/include/c++/13/bits/std_function.h \
+ /usr/include/c++/13/typeinfo /usr/include/c++/13/unordered_map \
+ /usr/include/c++/13/bits/unordered_map.h \
+ /usr/include/c++/13/bits/hashtable.h \
+ /usr/include/c++/13/bits/hashtable_policy.h \
+ /usr/include/c++/13/ext/aligned_buffer.h \
+ /usr/include/c++/13/bits/enable_special_members.h \
+ /usr/include/c++/13/bits/node_handle.h \
+ /usr/include/c++/13/bits/erase_if.h /usr/include/c++/13/array \
+ /usr/include/c++/13/bits/stl_algo.h \
+ /usr/include/c++/13/bits/algorithmfwd.h \
+ /usr/include/c++/13/bits/stl_heap.h \
+ /usr/include/c++/13/bits/uniform_int_dist.h \
+ /usr/include/c++/13/bits/stl_tempbuf.h /usr/include/c++/13/cstdlib \
  /usr/include/c++/13/string /usr/include/c++/13/bits/stringfwd.h \
  /usr/include/c++/13/bits/char_traits.h \
  /usr/include/c++/13/bits/postypes.h /usr/include/c++/13/cwchar \
@@ -319,9 +339,8 @@ CMakeFiles/Labirynt3D.dir/src/Engine/Window.cpp.o: \
  /usr/include/c++/13/bits/cxxabi_forced.h \
  /usr/include/c++/13/bits/basic_string.h /usr/include/c++/13/string_view \
  /usr/include/c++/13/bits/string_view.tcc \
- /usr/include/c++/13/ext/string_conversions.h /usr/include/c++/13/cstdlib \
- /usr/include/c++/13/cstdio /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+ /usr/include/c++/13/ext/string_conversions.h /usr/include/c++/13/cstdio \
+ /usr/include/stdio.h /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
@@ -333,21 +352,15 @@ CMakeFiles/Labirynt3D.dir/src/Engine/Window.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/13/bits/charconv.h \
  /usr/include/c++/13/bits/basic_string.tcc \
- /usr/include/c++/13/unordered_map \
- /usr/include/c++/13/bits/unordered_map.h \
- /usr/include/c++/13/bits/hashtable.h \
- /usr/include/c++/13/bits/hashtable_policy.h \
- /usr/include/c++/13/ext/aligned_buffer.h \
- /usr/include/c++/13/bits/enable_special_members.h \
- /usr/include/c++/13/bits/node_handle.h \
- /usr/include/c++/13/bits/erase_if.h \
- /home/antoni/studia/pgk/pracownia-3/include/Engine/ShaderRepository.hpp \
- /home/antoni/studia/pgk/pracownia-3/include/Engine/MeshRepository.hpp \
+ /home/antoni/pgk-3d-engine/include/Engine/Misc/Monoliths.hpp \
+ /home/antoni/pgk-3d-engine/include/Engine/GameObjectRepository.hpp \
+ /home/antoni/pgk-3d-engine/include/Engine/ShaderRepository.hpp \
+ /home/antoni/pgk-3d-engine/include/Engine/MeshRepository.hpp \
  /usr/include/c++/13/iostream /usr/include/c++/13/ostream \
  /usr/include/c++/13/ios /usr/include/c++/13/exception \
  /usr/include/c++/13/bits/exception_ptr.h \
  /usr/include/c++/13/bits/cxxabi_init_exception.h \
- /usr/include/c++/13/typeinfo /usr/include/c++/13/bits/nested_exception.h \
+ /usr/include/c++/13/bits/nested_exception.h \
  /usr/include/c++/13/bits/ios_base.h /usr/include/c++/13/ext/atomicity.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
@@ -378,10 +391,5 @@ CMakeFiles/Labirynt3D.dir/src/Engine/Window.cpp.o: \
  /usr/include/c++/13/bits/locale_facets.tcc \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
- /usr/include/c++/13/bits/istream.tcc /usr/include/glm/gtx/quaternion.hpp \
- /usr/include/glm/ext/quaternion_exponential.hpp \
- /usr/include/glm/ext/quaternion_exponential.inl \
- /usr/include/glm/gtx/norm.hpp /usr/include/glm/gtx/component_wise.hpp \
- /usr/include/glm/detail/setup.hpp \
- /usr/include/glm/gtx/component_wise.inl /usr/include/glm/gtx/norm.inl \
- /usr/include/glm/gtx/quaternion.inl
+ /usr/include/c++/13/bits/istream.tcc \
+ /home/antoni/pgk-3d-engine/include/Engine/VolumetricParticles.hpp

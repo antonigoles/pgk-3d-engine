@@ -3,19 +3,20 @@
 #include <cmath>
 #include <OpenGL.hpp>
 #include <Engine/Window.hpp>
-#include <Engine/Init.hpp>
+#include <Game/Init.hpp>
+#include <ModelEditor/Init.hpp>
 
 // --- Ustawienia okna ---
 unsigned int SCR_WIDTH = 1920;
 unsigned int SCR_HEIGHT = 1080;
 
-Engine::Window* engineWindow = nullptr;
+Engine::Window* gameWindow = nullptr;
 
 // --- Callback: dopasowanie viewportu po zmianie rozmiaru okna ---
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
     glViewport(0, 0, width, height);
-    if (engineWindow != nullptr) engineWindow->setViewportDimensions(width, height);
+    if (gameWindow != nullptr) gameWindow->setViewportDimensions(width, height);
 }
 
 // --- Obsługa wejścia ---
@@ -62,11 +63,9 @@ int main()
 
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_MULTISAMPLE);
-    // glEnable(GL_CULL_FACE);
-    // glCullFace(GL_BACK);
-
     
-    engineWindow = Engine::init(SCR_WIDTH, SCR_HEIGHT);
+    gameWindow = Game::init(SCR_WIDTH, SCR_HEIGHT);
+    // gameWindow = ModelEditor::init(SCR_WIDTH, SCR_HEIGHT);
 
     float deltaTime = 0.0f;
     float frameTimeCount = 0;
@@ -83,7 +82,7 @@ int main()
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 
-        engineWindow->step(window, deltaTime);
+        gameWindow->step(window, deltaTime);
 
         glfwSwapBuffers(window);
         glfwPollEvents();
@@ -92,7 +91,7 @@ int main()
 
         // std::cout << 1/deltaTime  << " fps " << "\n";
 
-        if (frameCount > 60) {
+        if (frameTimeCount > 5.0) {
             std::cout << ((float)frameCount)/(frameTimeCount) << "FPS" << "\n";
             frameCount = 0;
             frameTimeCount = 0;

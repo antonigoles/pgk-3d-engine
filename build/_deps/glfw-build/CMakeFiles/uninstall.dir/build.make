@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/antoni/studia/pgk/pracownia-3
+CMAKE_SOURCE_DIR = /home/antoni/pgk-3d-engine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/antoni/studia/pgk/pracownia-3/build
+CMAKE_BINARY_DIR = /home/antoni/pgk-3d-engine/build
 
 # Utility rule file for uninstall.
 
@@ -67,7 +67,7 @@ include _deps/glfw-build/CMakeFiles/uninstall.dir/compiler_depend.make
 include _deps/glfw-build/CMakeFiles/uninstall.dir/progress.make
 
 _deps/glfw-build/CMakeFiles/uninstall:
-	cd /home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-build && /usr/bin/cmake -P /home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-build/cmake_uninstall.cmake
+	cd /home/antoni/pgk-3d-engine/build/_deps/glfw-build && /usr/bin/cmake -P /home/antoni/pgk-3d-engine/build/_deps/glfw-build/cmake_uninstall.cmake
 
 uninstall: _deps/glfw-build/CMakeFiles/uninstall
 uninstall: _deps/glfw-build/CMakeFiles/uninstall.dir/build.make
@@ -78,10 +78,10 @@ _deps/glfw-build/CMakeFiles/uninstall.dir/build: uninstall
 .PHONY : _deps/glfw-build/CMakeFiles/uninstall.dir/build
 
 _deps/glfw-build/CMakeFiles/uninstall.dir/clean:
-	cd /home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-build && $(CMAKE_COMMAND) -P CMakeFiles/uninstall.dir/cmake_clean.cmake
+	cd /home/antoni/pgk-3d-engine/build/_deps/glfw-build && $(CMAKE_COMMAND) -P CMakeFiles/uninstall.dir/cmake_clean.cmake
 .PHONY : _deps/glfw-build/CMakeFiles/uninstall.dir/clean
 
 _deps/glfw-build/CMakeFiles/uninstall.dir/depend:
-	cd /home/antoni/studia/pgk/pracownia-3/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/antoni/studia/pgk/pracownia-3 /home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-src /home/antoni/studia/pgk/pracownia-3/build /home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-build /home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-build/CMakeFiles/uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/antoni/pgk-3d-engine/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/antoni/pgk-3d-engine /home/antoni/pgk-3d-engine/build/_deps/glfw-src /home/antoni/pgk-3d-engine/build /home/antoni/pgk-3d-engine/build/_deps/glfw-build /home/antoni/pgk-3d-engine/build/_deps/glfw-build/CMakeFiles/uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : _deps/glfw-build/CMakeFiles/uninstall.dir/depend
 

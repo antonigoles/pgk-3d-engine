@@ -3,38 +3,52 @@
 cmake_policy(SET CMP0009 NEW)
 
 # PROJECT_SOURCES at CMakeLists.txt:30 (file)
-file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/antoni/studia/pgk/pracownia-3/src/**/*.cpp")
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/antoni/pgk-3d-engine/src/**/*.cpp")
 set(OLD_GLOB
-  "/home/antoni/studia/pgk/pracownia-3/src/Engine/Camera.cpp"
-  "/home/antoni/studia/pgk/pracownia-3/src/Engine/GameObject.cpp"
-  "/home/antoni/studia/pgk/pracownia-3/src/Engine/GameObjectRepository.cpp"
-  "/home/antoni/studia/pgk/pracownia-3/src/Engine/Init.cpp"
-  "/home/antoni/studia/pgk/pracownia-3/src/Engine/Math/Generator.cpp"
-  "/home/antoni/studia/pgk/pracownia-3/src/Engine/Math/Transform.cpp"
-  "/home/antoni/studia/pgk/pracownia-3/src/Engine/MeshRepository.cpp"
-  "/home/antoni/studia/pgk/pracownia-3/src/Engine/ShaderRepository.cpp"
-  "/home/antoni/studia/pgk/pracownia-3/src/Engine/Window.cpp"
+  "/home/antoni/pgk-3d-engine/src/Engine/Camera.cpp"
+  "/home/antoni/pgk-3d-engine/src/Engine/FpsCamera.cpp"
+  "/home/antoni/pgk-3d-engine/src/Engine/GameObject.cpp"
+  "/home/antoni/pgk-3d-engine/src/Engine/GameObjectRepository.cpp"
+  "/home/antoni/pgk-3d-engine/src/Engine/Math/Generator.cpp"
+  "/home/antoni/pgk-3d-engine/src/Engine/Math/Math.cpp"
+  "/home/antoni/pgk-3d-engine/src/Engine/Math/Transform.cpp"
+  "/home/antoni/pgk-3d-engine/src/Engine/MeshRepository.cpp"
+  "/home/antoni/pgk-3d-engine/src/Engine/Player.cpp"
+  "/home/antoni/pgk-3d-engine/src/Engine/ShaderRepository.cpp"
+  "/home/antoni/pgk-3d-engine/src/Engine/TpsCamera.cpp"
+  "/home/antoni/pgk-3d-engine/src/Engine/VolumetricParticles.cpp"
+  "/home/antoni/pgk-3d-engine/src/Engine/Window.cpp"
+  "/home/antoni/pgk-3d-engine/src/Game/Init.cpp"
+  "/home/antoni/pgk-3d-engine/src/Game/Scripts/Scripts.cpp"
+  "/home/antoni/pgk-3d-engine/src/ModelEditor/Init.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "/home/antoni/studia/pgk/pracownia-3/build/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "/home/antoni/pgk-3d-engine/build/CMakeFiles/cmake.verify_globs")
 endif()
 
 # PROJECT_SOURCES at CMakeLists.txt:30 (file)
-file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/antoni/studia/pgk/pracownia-3/src/*.cpp")
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/antoni/pgk-3d-engine/src/*.cpp")
 set(OLD_GLOB
-  "/home/antoni/studia/pgk/pracownia-3/src/Engine/Camera.cpp"
-  "/home/antoni/studia/pgk/pracownia-3/src/Engine/GameObject.cpp"
-  "/home/antoni/studia/pgk/pracownia-3/src/Engine/GameObjectRepository.cpp"
-  "/home/antoni/studia/pgk/pracownia-3/src/Engine/Init.cpp"
-  "/home/antoni/studia/pgk/pracownia-3/src/Engine/Math/Generator.cpp"
-  "/home/antoni/studia/pgk/pracownia-3/src/Engine/Math/Transform.cpp"
-  "/home/antoni/studia/pgk/pracownia-3/src/Engine/MeshRepository.cpp"
-  "/home/antoni/studia/pgk/pracownia-3/src/Engine/ShaderRepository.cpp"
-  "/home/antoni/studia/pgk/pracownia-3/src/Engine/Window.cpp"
-  "/home/antoni/studia/pgk/pracownia-3/src/main.cpp"
+  "/home/antoni/pgk-3d-engine/src/Engine/Camera.cpp"
+  "/home/antoni/pgk-3d-engine/src/Engine/FpsCamera.cpp"
+  "/home/antoni/pgk-3d-engine/src/Engine/GameObject.cpp"
+  "/home/antoni/pgk-3d-engine/src/Engine/GameObjectRepository.cpp"
+  "/home/antoni/pgk-3d-engine/src/Engine/Math/Generator.cpp"
+  "/home/antoni/pgk-3d-engine/src/Engine/Math/Math.cpp"
+  "/home/antoni/pgk-3d-engine/src/Engine/Math/Transform.cpp"
+  "/home/antoni/pgk-3d-engine/src/Engine/MeshRepository.cpp"
+  "/home/antoni/pgk-3d-engine/src/Engine/Player.cpp"
+  "/home/antoni/pgk-3d-engine/src/Engine/ShaderRepository.cpp"
+  "/home/antoni/pgk-3d-engine/src/Engine/TpsCamera.cpp"
+  "/home/antoni/pgk-3d-engine/src/Engine/VolumetricParticles.cpp"
+  "/home/antoni/pgk-3d-engine/src/Engine/Window.cpp"
+  "/home/antoni/pgk-3d-engine/src/Game/Init.cpp"
+  "/home/antoni/pgk-3d-engine/src/Game/Scripts/Scripts.cpp"
+  "/home/antoni/pgk-3d-engine/src/ModelEditor/Init.cpp"
+  "/home/antoni/pgk-3d-engine/src/main.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
-  file(TOUCH_NOCREATE "/home/antoni/studia/pgk/pracownia-3/build/CMakeFiles/cmake.verify_globs")
+  file(TOUCH_NOCREATE "/home/antoni/pgk-3d-engine/build/CMakeFiles/cmake.verify_globs")
 endif()

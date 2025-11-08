@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/antoni/studia/pgk/pracownia-3
+CMAKE_SOURCE_DIR = /home/antoni/pgk-3d-engine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/antoni/studia/pgk/pracownia-3/build
+CMAKE_BINARY_DIR = /home/antoni/pgk-3d-engine/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/antoni/studia/pgk/pracownia-3/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/antoni/studia/pgk/pracownia-3/build/CMakeFiles /home/antoni/studia/pgk/pracownia-3/build/_deps/glfw-build/docs//CMakeFiles/progress.marks
-	cd /home/antoni/studia/pgk/pracownia-3/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/glfw-build/docs/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/antoni/studia/pgk/pracownia-3/build/CMakeFiles 0
+	cd /home/antoni/pgk-3d-engine/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/antoni/pgk-3d-engine/build/CMakeFiles /home/antoni/pgk-3d-engine/build/_deps/glfw-build/docs//CMakeFiles/progress.marks
+	cd /home/antoni/pgk-3d-engine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/glfw-build/docs/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antoni/pgk-3d-engine/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/antoni/studia/pgk/pracownia-3/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/glfw-build/docs/clean
+	cd /home/antoni/pgk-3d-engine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/glfw-build/docs/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,18 +148,18 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/antoni/studia/pgk/pracownia-3/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/glfw-build/docs/preinstall
+	cd /home/antoni/pgk-3d-engine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/glfw-build/docs/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/antoni/studia/pgk/pracownia-3/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/glfw-build/docs/preinstall
+	cd /home/antoni/pgk-3d-engine/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/glfw-build/docs/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/antoni/studia/pgk/pracownia-3/build && $(CMAKE_COMMAND) -P /home/antoni/studia/pgk/pracownia-3/build/CMakeFiles/VerifyGlobs.cmake
-	cd /home/antoni/studia/pgk/pracownia-3/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/antoni/pgk-3d-engine/build && $(CMAKE_COMMAND) -P /home/antoni/pgk-3d-engine/build/CMakeFiles/VerifyGlobs.cmake
+	cd /home/antoni/pgk-3d-engine/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Help Target
@@ -185,7 +185,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/antoni/studia/pgk/pracownia-3/build && $(CMAKE_COMMAND) -P /home/antoni/studia/pgk/pracownia-3/build/CMakeFiles/VerifyGlobs.cmake
-	cd /home/antoni/studia/pgk/pracownia-3/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/antoni/pgk-3d-engine/build && $(CMAKE_COMMAND) -P /home/antoni/pgk-3d-engine/build/CMakeFiles/VerifyGlobs.cmake
+	cd /home/antoni/pgk-3d-engine/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

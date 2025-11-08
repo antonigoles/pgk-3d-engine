@@ -1,7 +1,7 @@
 CMakeFiles/Labirynt3D.dir/src/Engine/MeshRepository.cpp.o: \
- /home/antoni/studia/pgk/pracownia-3/src/Engine/MeshRepository.cpp \
+ /home/antoni/pgk-3d-engine/src/Engine/MeshRepository.cpp \
  /usr/include/stdc-predef.h \
- /home/antoni/studia/pgk/pracownia-3/include/Engine/MeshRepository.hpp \
+ /home/antoni/pgk-3d-engine/include/Engine/MeshRepository.hpp \
  /usr/include/c++/13/unordered_map \
  /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
@@ -61,7 +61,7 @@ CMakeFiles/Labirynt3D.dir/src/Engine/MeshRepository.cpp.o: \
  /usr/include/c++/13/bits/memory_resource.h /usr/include/c++/13/cstddef \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
  /usr/include/c++/13/bits/uses_allocator_args.h \
- /home/antoni/studia/pgk/pracownia-3/include/Engine/Misc/Types.hpp \
+ /home/antoni/pgk-3d-engine/include/Engine/Misc/Types.hpp \
  /usr/include/glm/glm.hpp /usr/include/glm/detail/_fixes.hpp \
  /usr/include/c++/13/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
@@ -253,8 +253,15 @@ CMakeFiles/Labirynt3D.dir/src/Engine/MeshRepository.cpp.o: \
  /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
  /usr/include/c++/13/bits/refwrap.h /usr/include/c++/13/bits/vector.tcc \
- /home/antoni/studia/pgk/pracownia-3/include/Engine/GameObject.hpp \
- /home/antoni/studia/pgk/pracownia-3/include/Engine/Math/Transform.hpp \
+ /usr/include/c++/13/functional /usr/include/c++/13/bits/std_function.h \
+ /usr/include/c++/13/typeinfo /usr/include/c++/13/array \
+ /usr/include/c++/13/bits/stl_algo.h \
+ /usr/include/c++/13/bits/algorithmfwd.h \
+ /usr/include/c++/13/bits/stl_heap.h \
+ /usr/include/c++/13/bits/uniform_int_dist.h \
+ /usr/include/c++/13/bits/stl_tempbuf.h /usr/include/c++/13/cstdlib \
+ /home/antoni/pgk-3d-engine/include/Engine/GameObject.hpp \
+ /home/antoni/pgk-3d-engine/include/Engine/Math/Transform.hpp \
  /usr/include/glm/gtc/quaternion.hpp /usr/include/glm/gtc/constants.hpp \
  /usr/include/glm/ext/scalar_constants.hpp \
  /usr/include/glm/ext/scalar_constants.inl \
@@ -306,9 +313,8 @@ CMakeFiles/Labirynt3D.dir/src/Engine/MeshRepository.cpp.o: \
  /usr/include/c++/13/bits/cxxabi_forced.h \
  /usr/include/c++/13/bits/basic_string.h /usr/include/c++/13/string_view \
  /usr/include/c++/13/bits/string_view.tcc \
- /usr/include/c++/13/ext/string_conversions.h /usr/include/c++/13/cstdlib \
- /usr/include/c++/13/cstdio /usr/include/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+ /usr/include/c++/13/ext/string_conversions.h /usr/include/c++/13/cstdio \
+ /usr/include/stdio.h /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
@@ -323,7 +329,7 @@ CMakeFiles/Labirynt3D.dir/src/Engine/MeshRepository.cpp.o: \
  /usr/include/c++/13/istream /usr/include/c++/13/ios \
  /usr/include/c++/13/exception /usr/include/c++/13/bits/exception_ptr.h \
  /usr/include/c++/13/bits/cxxabi_init_exception.h \
- /usr/include/c++/13/typeinfo /usr/include/c++/13/bits/nested_exception.h \
+ /usr/include/c++/13/bits/nested_exception.h \
  /usr/include/c++/13/bits/ios_base.h /usr/include/c++/13/ext/atomicity.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
@@ -358,13 +364,7 @@ CMakeFiles/Labirynt3D.dir/src/Engine/MeshRepository.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
  /usr/include/c++/13/bits/fstream.tcc /usr/include/c++/13/iostream \
- /usr/include/glm/gtx/hash.hpp /usr/include/c++/13/functional \
- /usr/include/c++/13/bits/std_function.h /usr/include/c++/13/array \
- /usr/include/c++/13/bits/stl_algo.h \
- /usr/include/c++/13/bits/algorithmfwd.h \
- /usr/include/c++/13/bits/stl_heap.h \
- /usr/include/c++/13/bits/uniform_int_dist.h \
- /usr/include/c++/13/bits/stl_tempbuf.h /usr/include/glm/gtc/vec1.hpp \
+ /usr/include/glm/gtx/hash.hpp /usr/include/glm/gtc/vec1.hpp \
  /usr/include/glm/ext/vector_bool1.hpp \
  /usr/include/glm/ext/vector_bool1_precision.hpp \
  /usr/include/glm/ext/vector_float1.hpp \
@@ -377,5 +377,18 @@ CMakeFiles/Labirynt3D.dir/src/Engine/MeshRepository.cpp.o: \
  /usr/include/glm/ext/vector_uint1_sized.hpp \
  /usr/include/glm/gtx/dual_quaternion.hpp \
  /usr/include/glm/gtx/dual_quaternion.inl /usr/include/glm/gtx/hash.inl \
- /home/antoni/studia/pgk/pracownia-3/build/_deps/glad-build/include/glad/glad.h \
- /home/antoni/studia/pgk/pracownia-3/build/_deps/glad-build/include/KHR/khrplatform.h
+ /home/antoni/pgk-3d-engine/include/Engine/Math/Math.hpp \
+ /home/antoni/pgk-3d-engine/include/OpenGL.hpp \
+ /home/antoni/pgk-3d-engine/build/_deps/glad-build/include/glad/glad.h \
+ /home/antoni/pgk-3d-engine/build/_deps/glad-build/include/KHR/khrplatform.h \
+ /home/antoni/pgk-3d-engine/build/_deps/glfw-src/include/GLFW/glfw3.h \
+ /usr/include/glm/gtc/type_ptr.hpp /usr/include/c++/13/cstring \
+ /usr/include/string.h /usr/include/strings.h \
+ /usr/include/glm/gtc/type_ptr.inl /usr/include/glm/gtx/norm.hpp \
+ /usr/include/glm/gtx/quaternion.hpp \
+ /usr/include/glm/ext/quaternion_exponential.hpp \
+ /usr/include/glm/ext/quaternion_exponential.inl \
+ /usr/include/glm/gtx/quaternion.inl \
+ /usr/include/glm/gtx/component_wise.hpp \
+ /usr/include/glm/detail/setup.hpp \
+ /usr/include/glm/gtx/component_wise.inl /usr/include/glm/gtx/norm.inl

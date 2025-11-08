@@ -1,5 +1,5 @@
 CMakeFiles/Labirynt3D.dir/src/Engine/Math/Transform.cpp.o: \
- /home/antoni/studia/pgk/pracownia-3/src/Engine/Math/Transform.cpp \
+ /home/antoni/pgk-3d-engine/src/Engine/Math/Transform.cpp \
  /usr/include/stdc-predef.h /usr/include/glm/glm.hpp \
  /usr/include/glm/detail/_fixes.hpp /usr/include/c++/13/cmath \
  /usr/include/c++/13/bits/requires_hosted.h \
@@ -254,4 +254,4 @@ CMakeFiles/Labirynt3D.dir/src/Engine/Math/Transform.cpp.o: \
  /usr/include/glm/ext/quaternion_transform.inl \
  /usr/include/glm/gtc/quaternion.inl /usr/include/glm/gtc/epsilon.hpp \
  /usr/include/glm/detail/setup.hpp /usr/include/glm/gtc/epsilon.inl \
- /home/antoni/studia/pgk/pracownia-3/include/Engine/Math/Transform.hpp
+ /home/antoni/pgk-3d-engine/include/Engine/Math/Transform.hpp

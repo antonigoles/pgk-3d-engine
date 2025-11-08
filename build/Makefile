@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/antoni/studia/pgk/pracownia-3
+CMAKE_SOURCE_DIR = /home/antoni/pgk-3d-engine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/antoni/studia/pgk/pracownia-3/build
+CMAKE_BINARY_DIR = /home/antoni/pgk-3d-engine/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/antoni/studia/pgk/pracownia-3/build/CMakeFiles /home/antoni/studia/pgk/pracownia-3/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antoni/pgk-3d-engine/build/CMakeFiles /home/antoni/pgk-3d-engine/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/antoni/studia/pgk/pracownia-3/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antoni/pgk-3d-engine/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -158,7 +158,7 @@ preinstall/fast:
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -P /home/antoni/studia/pgk/pracownia-3/build/CMakeFiles/VerifyGlobs.cmake
+	$(CMAKE_COMMAND) -P /home/antoni/pgk-3d-engine/build/CMakeFiles/VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
@@ -264,6 +264,30 @@ src/Engine/Camera.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labirynt3D.dir/build.make CMakeFiles/Labirynt3D.dir/src/Engine/Camera.cpp.s
 .PHONY : src/Engine/Camera.cpp.s
 
+src/Engine/FpsCamera.o: src/Engine/FpsCamera.cpp.o
+.PHONY : src/Engine/FpsCamera.o
+
+# target to build an object file
+src/Engine/FpsCamera.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labirynt3D.dir/build.make CMakeFiles/Labirynt3D.dir/src/Engine/FpsCamera.cpp.o
+.PHONY : src/Engine/FpsCamera.cpp.o
+
+src/Engine/FpsCamera.i: src/Engine/FpsCamera.cpp.i
+.PHONY : src/Engine/FpsCamera.i
+
+# target to preprocess a source file
+src/Engine/FpsCamera.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labirynt3D.dir/build.make CMakeFiles/Labirynt3D.dir/src/Engine/FpsCamera.cpp.i
+.PHONY : src/Engine/FpsCamera.cpp.i
+
+src/Engine/FpsCamera.s: src/Engine/FpsCamera.cpp.s
+.PHONY : src/Engine/FpsCamera.s
+
+# target to generate assembly for a file
+src/Engine/FpsCamera.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labirynt3D.dir/build.make CMakeFiles/Labirynt3D.dir/src/Engine/FpsCamera.cpp.s
+.PHONY : src/Engine/FpsCamera.cpp.s
+
 src/Engine/GameObject.o: src/Engine/GameObject.cpp.o
 .PHONY : src/Engine/GameObject.o
 
@@ -312,30 +336,6 @@ src/Engine/GameObjectRepository.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labirynt3D.dir/build.make CMakeFiles/Labirynt3D.dir/src/Engine/GameObjectRepository.cpp.s
 .PHONY : src/Engine/GameObjectRepository.cpp.s
 
-src/Engine/Init.o: src/Engine/Init.cpp.o
-.PHONY : src/Engine/Init.o
-
-# target to build an object file
-src/Engine/Init.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labirynt3D.dir/build.make CMakeFiles/Labirynt3D.dir/src/Engine/Init.cpp.o
-.PHONY : src/Engine/Init.cpp.o
-
-src/Engine/Init.i: src/Engine/Init.cpp.i
-.PHONY : src/Engine/Init.i
-
-# target to preprocess a source file
-src/Engine/Init.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labirynt3D.dir/build.make CMakeFiles/Labirynt3D.dir/src/Engine/Init.cpp.i
-.PHONY : src/Engine/Init.cpp.i
-
-src/Engine/Init.s: src/Engine/Init.cpp.s
-.PHONY : src/Engine/Init.s
-
-# target to generate assembly for a file
-src/Engine/Init.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labirynt3D.dir/build.make CMakeFiles/Labirynt3D.dir/src/Engine/Init.cpp.s
-.PHONY : src/Engine/Init.cpp.s
-
 src/Engine/Math/Generator.o: src/Engine/Math/Generator.cpp.o
 .PHONY : src/Engine/Math/Generator.o
 
@@ -359,6 +359,30 @@ src/Engine/Math/Generator.s: src/Engine/Math/Generator.cpp.s
 src/Engine/Math/Generator.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labirynt3D.dir/build.make CMakeFiles/Labirynt3D.dir/src/Engine/Math/Generator.cpp.s
 .PHONY : src/Engine/Math/Generator.cpp.s
+
+src/Engine/Math/Math.o: src/Engine/Math/Math.cpp.o
+.PHONY : src/Engine/Math/Math.o
+
+# target to build an object file
+src/Engine/Math/Math.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labirynt3D.dir/build.make CMakeFiles/Labirynt3D.dir/src/Engine/Math/Math.cpp.o
+.PHONY : src/Engine/Math/Math.cpp.o
+
+src/Engine/Math/Math.i: src/Engine/Math/Math.cpp.i
+.PHONY : src/Engine/Math/Math.i
+
+# target to preprocess a source file
+src/Engine/Math/Math.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labirynt3D.dir/build.make CMakeFiles/Labirynt3D.dir/src/Engine/Math/Math.cpp.i
+.PHONY : src/Engine/Math/Math.cpp.i
+
+src/Engine/Math/Math.s: src/Engine/Math/Math.cpp.s
+.PHONY : src/Engine/Math/Math.s
+
+# target to generate assembly for a file
+src/Engine/Math/Math.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labirynt3D.dir/build.make CMakeFiles/Labirynt3D.dir/src/Engine/Math/Math.cpp.s
+.PHONY : src/Engine/Math/Math.cpp.s
 
 src/Engine/Math/Transform.o: src/Engine/Math/Transform.cpp.o
 .PHONY : src/Engine/Math/Transform.o
@@ -408,6 +432,30 @@ src/Engine/MeshRepository.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labirynt3D.dir/build.make CMakeFiles/Labirynt3D.dir/src/Engine/MeshRepository.cpp.s
 .PHONY : src/Engine/MeshRepository.cpp.s
 
+src/Engine/Player.o: src/Engine/Player.cpp.o
+.PHONY : src/Engine/Player.o
+
+# target to build an object file
+src/Engine/Player.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labirynt3D.dir/build.make CMakeFiles/Labirynt3D.dir/src/Engine/Player.cpp.o
+.PHONY : src/Engine/Player.cpp.o
+
+src/Engine/Player.i: src/Engine/Player.cpp.i
+.PHONY : src/Engine/Player.i
+
+# target to preprocess a source file
+src/Engine/Player.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labirynt3D.dir/build.make CMakeFiles/Labirynt3D.dir/src/Engine/Player.cpp.i
+.PHONY : src/Engine/Player.cpp.i
+
+src/Engine/Player.s: src/Engine/Player.cpp.s
+.PHONY : src/Engine/Player.s
+
+# target to generate assembly for a file
+src/Engine/Player.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labirynt3D.dir/build.make CMakeFiles/Labirynt3D.dir/src/Engine/Player.cpp.s
+.PHONY : src/Engine/Player.cpp.s
+
 src/Engine/ShaderRepository.o: src/Engine/ShaderRepository.cpp.o
 .PHONY : src/Engine/ShaderRepository.o
 
@@ -432,6 +480,54 @@ src/Engine/ShaderRepository.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labirynt3D.dir/build.make CMakeFiles/Labirynt3D.dir/src/Engine/ShaderRepository.cpp.s
 .PHONY : src/Engine/ShaderRepository.cpp.s
 
+src/Engine/TpsCamera.o: src/Engine/TpsCamera.cpp.o
+.PHONY : src/Engine/TpsCamera.o
+
+# target to build an object file
+src/Engine/TpsCamera.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labirynt3D.dir/build.make CMakeFiles/Labirynt3D.dir/src/Engine/TpsCamera.cpp.o
+.PHONY : src/Engine/TpsCamera.cpp.o
+
+src/Engine/TpsCamera.i: src/Engine/TpsCamera.cpp.i
+.PHONY : src/Engine/TpsCamera.i
+
+# target to preprocess a source file
+src/Engine/TpsCamera.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labirynt3D.dir/build.make CMakeFiles/Labirynt3D.dir/src/Engine/TpsCamera.cpp.i
+.PHONY : src/Engine/TpsCamera.cpp.i
+
+src/Engine/TpsCamera.s: src/Engine/TpsCamera.cpp.s
+.PHONY : src/Engine/TpsCamera.s
+
+# target to generate assembly for a file
+src/Engine/TpsCamera.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labirynt3D.dir/build.make CMakeFiles/Labirynt3D.dir/src/Engine/TpsCamera.cpp.s
+.PHONY : src/Engine/TpsCamera.cpp.s
+
+src/Engine/VolumetricParticles.o: src/Engine/VolumetricParticles.cpp.o
+.PHONY : src/Engine/VolumetricParticles.o
+
+# target to build an object file
+src/Engine/VolumetricParticles.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labirynt3D.dir/build.make CMakeFiles/Labirynt3D.dir/src/Engine/VolumetricParticles.cpp.o
+.PHONY : src/Engine/VolumetricParticles.cpp.o
+
+src/Engine/VolumetricParticles.i: src/Engine/VolumetricParticles.cpp.i
+.PHONY : src/Engine/VolumetricParticles.i
+
+# target to preprocess a source file
+src/Engine/VolumetricParticles.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labirynt3D.dir/build.make CMakeFiles/Labirynt3D.dir/src/Engine/VolumetricParticles.cpp.i
+.PHONY : src/Engine/VolumetricParticles.cpp.i
+
+src/Engine/VolumetricParticles.s: src/Engine/VolumetricParticles.cpp.s
+.PHONY : src/Engine/VolumetricParticles.s
+
+# target to generate assembly for a file
+src/Engine/VolumetricParticles.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labirynt3D.dir/build.make CMakeFiles/Labirynt3D.dir/src/Engine/VolumetricParticles.cpp.s
+.PHONY : src/Engine/VolumetricParticles.cpp.s
+
 src/Engine/Window.o: src/Engine/Window.cpp.o
 .PHONY : src/Engine/Window.o
 
@@ -455,6 +551,78 @@ src/Engine/Window.s: src/Engine/Window.cpp.s
 src/Engine/Window.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labirynt3D.dir/build.make CMakeFiles/Labirynt3D.dir/src/Engine/Window.cpp.s
 .PHONY : src/Engine/Window.cpp.s
+
+src/Game/Init.o: src/Game/Init.cpp.o
+.PHONY : src/Game/Init.o
+
+# target to build an object file
+src/Game/Init.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labirynt3D.dir/build.make CMakeFiles/Labirynt3D.dir/src/Game/Init.cpp.o
+.PHONY : src/Game/Init.cpp.o
+
+src/Game/Init.i: src/Game/Init.cpp.i
+.PHONY : src/Game/Init.i
+
+# target to preprocess a source file
+src/Game/Init.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labirynt3D.dir/build.make CMakeFiles/Labirynt3D.dir/src/Game/Init.cpp.i
+.PHONY : src/Game/Init.cpp.i
+
+src/Game/Init.s: src/Game/Init.cpp.s
+.PHONY : src/Game/Init.s
+
+# target to generate assembly for a file
+src/Game/Init.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labirynt3D.dir/build.make CMakeFiles/Labirynt3D.dir/src/Game/Init.cpp.s
+.PHONY : src/Game/Init.cpp.s
+
+src/Game/Scripts/Scripts.o: src/Game/Scripts/Scripts.cpp.o
+.PHONY : src/Game/Scripts/Scripts.o
+
+# target to build an object file
+src/Game/Scripts/Scripts.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labirynt3D.dir/build.make CMakeFiles/Labirynt3D.dir/src/Game/Scripts/Scripts.cpp.o
+.PHONY : src/Game/Scripts/Scripts.cpp.o
+
+src/Game/Scripts/Scripts.i: src/Game/Scripts/Scripts.cpp.i
+.PHONY : src/Game/Scripts/Scripts.i
+
+# target to preprocess a source file
+src/Game/Scripts/Scripts.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labirynt3D.dir/build.make CMakeFiles/Labirynt3D.dir/src/Game/Scripts/Scripts.cpp.i
+.PHONY : src/Game/Scripts/Scripts.cpp.i
+
+src/Game/Scripts/Scripts.s: src/Game/Scripts/Scripts.cpp.s
+.PHONY : src/Game/Scripts/Scripts.s
+
+# target to generate assembly for a file
+src/Game/Scripts/Scripts.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labirynt3D.dir/build.make CMakeFiles/Labirynt3D.dir/src/Game/Scripts/Scripts.cpp.s
+.PHONY : src/Game/Scripts/Scripts.cpp.s
+
+src/ModelEditor/Init.o: src/ModelEditor/Init.cpp.o
+.PHONY : src/ModelEditor/Init.o
+
+# target to build an object file
+src/ModelEditor/Init.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labirynt3D.dir/build.make CMakeFiles/Labirynt3D.dir/src/ModelEditor/Init.cpp.o
+.PHONY : src/ModelEditor/Init.cpp.o
+
+src/ModelEditor/Init.i: src/ModelEditor/Init.cpp.i
+.PHONY : src/ModelEditor/Init.i
+
+# target to preprocess a source file
+src/ModelEditor/Init.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labirynt3D.dir/build.make CMakeFiles/Labirynt3D.dir/src/ModelEditor/Init.cpp.i
+.PHONY : src/ModelEditor/Init.cpp.i
+
+src/ModelEditor/Init.s: src/ModelEditor/Init.cpp.s
+.PHONY : src/ModelEditor/Init.s
+
+# target to generate assembly for a file
+src/ModelEditor/Init.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Labirynt3D.dir/build.make CMakeFiles/Labirynt3D.dir/src/ModelEditor/Init.cpp.s
+.PHONY : src/ModelEditor/Init.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -501,30 +669,51 @@ help:
 	@echo "... src/Engine/Camera.o"
 	@echo "... src/Engine/Camera.i"
 	@echo "... src/Engine/Camera.s"
+	@echo "... src/Engine/FpsCamera.o"
+	@echo "... src/Engine/FpsCamera.i"
+	@echo "... src/Engine/FpsCamera.s"
 	@echo "... src/Engine/GameObject.o"
 	@echo "... src/Engine/GameObject.i"
 	@echo "... src/Engine/GameObject.s"
 	@echo "... src/Engine/GameObjectRepository.o"
 	@echo "... src/Engine/GameObjectRepository.i"
 	@echo "... src/Engine/GameObjectRepository.s"
-	@echo "... src/Engine/Init.o"
-	@echo "... src/Engine/Init.i"
-	@echo "... src/Engine/Init.s"
 	@echo "... src/Engine/Math/Generator.o"
 	@echo "... src/Engine/Math/Generator.i"
 	@echo "... src/Engine/Math/Generator.s"
+	@echo "... src/Engine/Math/Math.o"
+	@echo "... src/Engine/Math/Math.i"
+	@echo "... src/Engine/Math/Math.s"
 	@echo "... src/Engine/Math/Transform.o"
 	@echo "... src/Engine/Math/Transform.i"
 	@echo "... src/Engine/Math/Transform.s"
 	@echo "... src/Engine/MeshRepository.o"
 	@echo "... src/Engine/MeshRepository.i"
 	@echo "... src/Engine/MeshRepository.s"
+	@echo "... src/Engine/Player.o"
+	@echo "... src/Engine/Player.i"
+	@echo "... src/Engine/Player.s"
 	@echo "... src/Engine/ShaderRepository.o"
 	@echo "... src/Engine/ShaderRepository.i"
 	@echo "... src/Engine/ShaderRepository.s"
+	@echo "... src/Engine/TpsCamera.o"
+	@echo "... src/Engine/TpsCamera.i"
+	@echo "... src/Engine/TpsCamera.s"
+	@echo "... src/Engine/VolumetricParticles.o"
+	@echo "... src/Engine/VolumetricParticles.i"
+	@echo "... src/Engine/VolumetricParticles.s"
 	@echo "... src/Engine/Window.o"
 	@echo "... src/Engine/Window.i"
 	@echo "... src/Engine/Window.s"
+	@echo "... src/Game/Init.o"
+	@echo "... src/Game/Init.i"
+	@echo "... src/Game/Init.s"
+	@echo "... src/Game/Scripts/Scripts.o"
+	@echo "... src/Game/Scripts/Scripts.i"
+	@echo "... src/Game/Scripts/Scripts.s"
+	@echo "... src/ModelEditor/Init.o"
+	@echo "... src/ModelEditor/Init.i"
+	@echo "... src/ModelEditor/Init.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
@@ -539,7 +728,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -P /home/antoni/studia/pgk/pracownia-3/build/CMakeFiles/VerifyGlobs.cmake
+	$(CMAKE_COMMAND) -P /home/antoni/pgk-3d-engine/build/CMakeFiles/VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
