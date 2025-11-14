@@ -11,6 +11,17 @@ namespace Engine {
         glm::vec3 velocity;
         Math::Transform transform;
     };
+
+    struct b_ParticleStatic {
+        glm::vec4 rotation;
+        float scale;
+        float padding[3];
+    };
+
+    struct b_ParticleDynamic {
+        glm::vec3 position;
+        float padding;
+    };
     
     class SphericalVolumetricParticleGenerator {
     public:
@@ -30,6 +41,9 @@ namespace Engine {
 
         EngineID particleMeshId;
         EngineID shaderID;
+
+        GLuint staticSSBO;
+        GLuint dynamicSSBO;
     };
     
     class VolumetricParticleGeneratorRepository {

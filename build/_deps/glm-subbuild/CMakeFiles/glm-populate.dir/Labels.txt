@@ -1,0 +1,14 @@
+# Target labels
+ glm-populate
+# Source files and their labels
+C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glm-subbuild/CMakeFiles/glm-populate
+C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glm-subbuild/CMakeFiles/33d7d4d54d4681170b1b39882b3244da/glm-populate.rule
+C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glm-subbuild/CMakeFiles/e55a128c08d3bde74b5dcf56b2860c33/glm-populate-complete.rule
+C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glm-subbuild/CMakeFiles/9e6e1d154acff157575d673d020a28d1/glm-populate-build.rule
+C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glm-subbuild/CMakeFiles/9e6e1d154acff157575d673d020a28d1/glm-populate-configure.rule
+C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glm-subbuild/CMakeFiles/9e6e1d154acff157575d673d020a28d1/glm-populate-download.rule
+C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glm-subbuild/CMakeFiles/9e6e1d154acff157575d673d020a28d1/glm-populate-install.rule
+C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glm-subbuild/CMakeFiles/9e6e1d154acff157575d673d020a28d1/glm-populate-mkdir.rule
+C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glm-subbuild/CMakeFiles/9e6e1d154acff157575d673d020a28d1/glm-populate-patch.rule
+C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glm-subbuild/CMakeFiles/9e6e1d154acff157575d673d020a28d1/glm-populate-test.rule
+C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glm-subbuild/CMakeFiles/9e6e1d154acff157575d673d020a28d1/glm-populate-update.rule

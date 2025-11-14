@@ -43,14 +43,46 @@ namespace Engine {
         svpg->shaderID = shaderID;
         
         std::vector<VolumetricParticle*> startingParticleVector;
+
+        std::vector<b_ParticleStatic> staticDataVector;
+        std::vector<b_ParticleDynamic> dynamicDataVector;
+
+
         for (int i = 0; i<particleCount; i++) {
             VolumetricParticle* vp = new VolumetricParticle();
             this->restartSphericalGeneratorParticle(svpg, vp);
             startingParticleVector.push_back(vp);
+
+            auto rot = vp->transform.getRotation();
+            staticDataVector.push_back({
+                glm::vec4(rot.x, rot.y, rot.z, rot.w),
+                vp->transform.getScale(),
+                0,0,0
+            });
+
+            dynamicDataVector.push_back({
+                vp->transform.getPosition(), 0
+            });
         }
         
         svpg->particlePool = startingParticleVector;
-    
+
+        GLuint dynamicSSBO, staticSSBO;
+        glGenBuffers(1, &dynamicSSBO);
+
+        glBindBuffer(GL_SHADER_STORAGE_BUFFER, dynamicSSBO);
+        glBufferData(GL_SHADER_STORAGE_BUFFER, sizeof(b_ParticleDynamic) * particleCount, dynamicDataVector.data(), GL_DYNAMIC_DRAW);
+        glBindBufferBase(GL_SHADER_STORAGE_BUFFER, 1, dynamicSSBO);
+
+        glGenBuffers(1, &staticSSBO);
+        glBindBuffer(GL_SHADER_STORAGE_BUFFER, staticSSBO);
+        glBufferData(GL_SHADER_STORAGE_BUFFER, sizeof(b_ParticleStatic) * particleCount, staticDataVector.data(), GL_STATIC_DRAW);
+        glBindBufferBase(GL_SHADER_STORAGE_BUFFER, 0, staticSSBO);
+
+
+        svpg->staticSSBO = staticSSBO;
+        svpg->dynamicSSBO = dynamicSSBO;
+
         this->sphericalSourceMap[id] = svpg;
     };
 
@@ -65,6 +97,7 @@ namespace Engine {
 
     void VolumetricParticleGeneratorRepository::stepSphericalGenerator(EngineID generatorID, float deltaTime) {
         SphericalVolumetricParticleGenerator* generator = this->sphericalSourceMap[generatorID];
+        std::vector<b_ParticleDynamic> dynamicParticleDataBufferData;
         for (VolumetricParticle* particle : generator->particlePool) {
             particle->velocity += generator->actingForce * deltaTime;
             particle->transform.setPosition(
@@ -77,7 +110,15 @@ namespace Engine {
             ) {
                 this->restartSphericalGeneratorParticle(generator, particle);
             }
+            dynamicParticleDataBufferData.push_back({particle->transform.getPosition(), 0});
         }
+        glBindBuffer(GL_SHADER_STORAGE_BUFFER, generator->dynamicSSBO);
+        glBufferSubData(
+            GL_SHADER_STORAGE_BUFFER, 
+            0, 
+            sizeof(b_ParticleDynamic) * generator->particleCount, 
+            dynamicParticleDataBufferData.data()
+        );
     };
 
     void VolumetricParticleGeneratorRepository::restartSphericalGeneratorParticle(

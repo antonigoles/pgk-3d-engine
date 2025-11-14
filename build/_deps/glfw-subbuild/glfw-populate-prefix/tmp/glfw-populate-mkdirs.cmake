@@ -4,19 +4,19 @@
 cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
-  "/home/antoni/pgk-3d-engine/build/_deps/glfw-src"
-  "/home/antoni/pgk-3d-engine/build/_deps/glfw-build"
-  "/home/antoni/pgk-3d-engine/build/_deps/glfw-subbuild/glfw-populate-prefix"
-  "/home/antoni/pgk-3d-engine/build/_deps/glfw-subbuild/glfw-populate-prefix/tmp"
-  "/home/antoni/pgk-3d-engine/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp"
-  "/home/antoni/pgk-3d-engine/build/_deps/glfw-subbuild/glfw-populate-prefix/src"
-  "/home/antoni/pgk-3d-engine/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp"
+  "C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glfw-src"
+  "C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glfw-build"
+  "C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glfw-subbuild/glfw-populate-prefix"
+  "C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glfw-subbuild/glfw-populate-prefix/tmp"
+  "C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp"
+  "C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glfw-subbuild/glfw-populate-prefix/src"
+  "C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp"
 )
 
-set(configSubDirs )
+set(configSubDirs Debug)
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "/home/antoni/pgk-3d-engine/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/${subDir}")
+    file(MAKE_DIRECTORY "C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "/home/antoni/pgk-3d-engine/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp${cfgdir}") # cfgdir has leading slash
 endif()

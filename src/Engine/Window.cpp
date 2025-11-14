@@ -67,7 +67,6 @@ namespace Engine {
         // render particles
         auto sphericalGenerators = volumetricParticleGeneratorRepository.getAllSphericalGenerators();
         for (auto generator : sphericalGenerators) {
-            volumetricParticleGeneratorRepository.stepSphericalGenerator(generator->generatorID, deltaTime);
             // draw particle
             // 1. Set shader
             shaderRepository.useShaderWithDataByID(generator->shaderID, {}, {});
@@ -76,13 +75,12 @@ namespace Engine {
             shaderRepository.setUniformVec3("viewPos", this->camera->transform.getPosition());
 
             // 2. load mesh and draw all particles
-            // TODO: Maybe rewrite this with instancing in mind, might be simple 
-            for (auto particle : generator->particlePool) {
-                shaderRepository.setUniformMat4("model", particle->transform.getModelMatrix());
-                EngineID meshVAO = meshRepository.getMeshVAO(generator->particleMeshId);
-                glBindVertexArray(meshVAO);
-                glDrawArrays(GL_TRIANGLES, 0, meshRepository.getMeshSize(generator->particleMeshId));
-            }
+            // TODO: Maybe rewrite this with instancing in mind, might be simple
+            EngineID meshVAO = meshRepository.getMeshVAO(generator->particleMeshId);
+            glBindVertexArray(meshVAO);
+            
+            volumetricParticleGeneratorRepository.stepSphericalGenerator(generator->generatorID, deltaTime);
+            glDrawArraysInstanced(GL_TRIANGLES, 0, meshRepository.getMeshSize(generator->particleMeshId), generator->particleCount);
         }
     };
 

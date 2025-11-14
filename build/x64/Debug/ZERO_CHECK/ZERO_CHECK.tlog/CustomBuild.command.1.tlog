@@ -1,0 +1,10 @@
+^C:\USERS\ANTONI\DESKTOP\PGK-3D-ENGINE\BUILD\CMAKEFILES\588E395DBF9457F47612B33DCD03D414\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Antoni/Desktop/pgk-3d-engine -BC:/Users/Antoni/Desktop/pgk-3d-engine/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Antoni/Desktop/pgk-3d-engine/build/Labirynt3D.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

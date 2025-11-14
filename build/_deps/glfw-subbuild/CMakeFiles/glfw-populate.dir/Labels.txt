@@ -1,14 +1,14 @@
 # Target labels
  glfw-populate
 # Source files and their labels
-/home/antoni/pgk-3d-engine/build/_deps/glfw-subbuild/CMakeFiles/glfw-populate
-/home/antoni/pgk-3d-engine/build/_deps/glfw-subbuild/CMakeFiles/glfw-populate.rule
-/home/antoni/pgk-3d-engine/build/_deps/glfw-subbuild/CMakeFiles/glfw-populate-complete.rule
-/home/antoni/pgk-3d-engine/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-build.rule
-/home/antoni/pgk-3d-engine/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-configure.rule
-/home/antoni/pgk-3d-engine/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-download.rule
-/home/antoni/pgk-3d-engine/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-install.rule
-/home/antoni/pgk-3d-engine/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-mkdir.rule
-/home/antoni/pgk-3d-engine/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-patch.rule
-/home/antoni/pgk-3d-engine/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-test.rule
-/home/antoni/pgk-3d-engine/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-update.rule
+C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glfw-subbuild/CMakeFiles/glfw-populate
+C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glfw-subbuild/CMakeFiles/ca913987615d75171c9208cdb93a5604/glfw-populate.rule
+C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glfw-subbuild/CMakeFiles/1130a7f894f2031af6c38e283bda6a4c/glfw-populate-complete.rule
+C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glfw-subbuild/CMakeFiles/a22ee435ffb4392db732f2e8853585d9/glfw-populate-build.rule
+C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glfw-subbuild/CMakeFiles/a22ee435ffb4392db732f2e8853585d9/glfw-populate-configure.rule
+C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glfw-subbuild/CMakeFiles/a22ee435ffb4392db732f2e8853585d9/glfw-populate-download.rule
+C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glfw-subbuild/CMakeFiles/a22ee435ffb4392db732f2e8853585d9/glfw-populate-install.rule
+C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glfw-subbuild/CMakeFiles/a22ee435ffb4392db732f2e8853585d9/glfw-populate-mkdir.rule
+C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glfw-subbuild/CMakeFiles/a22ee435ffb4392db732f2e8853585d9/glfw-populate-patch.rule
+C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glfw-subbuild/CMakeFiles/a22ee435ffb4392db732f2e8853585d9/glfw-populate-test.rule
+C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glfw-subbuild/CMakeFiles/a22ee435ffb4392db732f2e8853585d9/glfw-populate-update.rule

@@ -77,6 +77,7 @@ namespace Engine {
         glDeleteShader(vertex);
         glDeleteShader(fragment);
 
+        this->locationCache[ID] = std::unordered_map<std::string, GLint>();
         return ID;
     };
 
@@ -124,7 +125,7 @@ namespace Engine {
 
     void ShaderRepository::setUniformMat4(const std::string &name, const glm::mat4 &mat) {
         glUniformMatrix4fv(
-            glGetUniformLocation(this->lastLoadedShader, name.c_str()), 
+            this->getUnfiromLocation(name), 
             1,
             GL_FALSE,
             &mat[0][0]
@@ -133,10 +134,21 @@ namespace Engine {
 
     void ShaderRepository::setUniformVec3(const std::string &name, const glm::vec3 &vec) {
         glUniform3fv(
-            glGetUniformLocation(this->lastLoadedShader, name.c_str()), 
+            this->getUnfiromLocation(name), 
             1,
             &vec[0]
         );
+    };
+
+    GLint ShaderRepository::getUnfiromLocation(const std::string &name) {
+        static int cacheMiss = 0;
+        if (this->locationCache[this->lastLoadedShader].contains(name)) {
+            return this->locationCache[this->lastLoadedShader][name];
+        }
+        cacheMiss++;
+        GLint location = glGetUniformLocation(this->lastLoadedShader, name.c_str());
+        this->locationCache[this->lastLoadedShader][name] = location;
+        return location;
     };
 
     ShaderRepository shaderRepository = ShaderRepository();

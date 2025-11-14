@@ -2,37 +2,37 @@
 	"sources" : 
 	[
 		{
-			"file" : "/home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/CMakeFiles/glad-populate"
+			"file" : "C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glad-subbuild/CMakeFiles/glad-populate"
 		},
 		{
-			"file" : "/home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/CMakeFiles/glad-populate.rule"
+			"file" : "C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glad-subbuild/CMakeFiles/2a651964695102ce79914eb4fc007b09/glad-populate.rule"
 		},
 		{
-			"file" : "/home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/CMakeFiles/glad-populate-complete.rule"
+			"file" : "C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glad-subbuild/CMakeFiles/2bd2aa08673a4decd528e5d41fb59c63/glad-populate-complete.rule"
 		},
 		{
-			"file" : "/home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-build.rule"
+			"file" : "C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glad-subbuild/CMakeFiles/fbbc1a63c2541addedc60ee00457db15/glad-populate-build.rule"
 		},
 		{
-			"file" : "/home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-configure.rule"
+			"file" : "C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glad-subbuild/CMakeFiles/fbbc1a63c2541addedc60ee00457db15/glad-populate-configure.rule"
 		},
 		{
-			"file" : "/home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-download.rule"
+			"file" : "C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glad-subbuild/CMakeFiles/fbbc1a63c2541addedc60ee00457db15/glad-populate-download.rule"
 		},
 		{
-			"file" : "/home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-install.rule"
+			"file" : "C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glad-subbuild/CMakeFiles/fbbc1a63c2541addedc60ee00457db15/glad-populate-install.rule"
 		},
 		{
-			"file" : "/home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-mkdir.rule"
+			"file" : "C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glad-subbuild/CMakeFiles/fbbc1a63c2541addedc60ee00457db15/glad-populate-mkdir.rule"
 		},
 		{
-			"file" : "/home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-patch.rule"
+			"file" : "C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glad-subbuild/CMakeFiles/fbbc1a63c2541addedc60ee00457db15/glad-populate-patch.rule"
 		},
 		{
-			"file" : "/home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-test.rule"
+			"file" : "C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glad-subbuild/CMakeFiles/fbbc1a63c2541addedc60ee00457db15/glad-populate-test.rule"
 		},
 		{
-			"file" : "/home/antoni/pgk-3d-engine/build/_deps/glad-subbuild/glad-populate-prefix/src/glad-populate-stamp/glad-populate-update.rule"
+			"file" : "C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glad-subbuild/CMakeFiles/fbbc1a63c2541addedc60ee00457db15/glad-populate-update.rule"
 		}
 	],
 	"target" : 

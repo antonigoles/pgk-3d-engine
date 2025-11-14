@@ -160,15 +160,15 @@ namespace Game
 
         Engine::volumetricParticleGeneratorRepository.createSphericalParticleSource(
             glm::vec3{0,0,0}, // position
-            glm::vec3{0,-4.0f,0}, // acting force
-            15.0f, // radius
-            4.0f, // particleSpeed
-            0.2f, // speedVariance
+            glm::vec3{0,-90.8f,0}, // acting force
+            20.0f, // radius
+            8.0f, // particleSpeed
+            1.0f, // speedVariance
             0.2f, // particleSize
             0.1f, // sizeVariance
             1.0f, // rotationVariance
-            1000, // particle count
-            particleMesh,
+            100, // particle count
+            sphereMesh,
             particleShader
         );
 

@@ -1,0 +1,10 @@
+^C:\USERS\ANTONI\DESKTOP\PGK-3D-ENGINE\BUILD\_DEPS\GLAD-SRC\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Antoni/Desktop/pgk-3d-engine -BC:/Users/Antoni/Desktop/pgk-3d-engine/build --check-stamp-file C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glad-build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

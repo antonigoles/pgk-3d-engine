@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glm-subbuild/CMakeFiles/glm-populate"
+		},
+		{
+			"file" : "C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glm-subbuild/CMakeFiles/33d7d4d54d4681170b1b39882b3244da/glm-populate.rule"
+		},
+		{
+			"file" : "C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glm-subbuild/CMakeFiles/e55a128c08d3bde74b5dcf56b2860c33/glm-populate-complete.rule"
+		},
+		{
+			"file" : "C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glm-subbuild/CMakeFiles/9e6e1d154acff157575d673d020a28d1/glm-populate-build.rule"
+		},
+		{
+			"file" : "C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glm-subbuild/CMakeFiles/9e6e1d154acff157575d673d020a28d1/glm-populate-configure.rule"
+		},
+		{
+			"file" : "C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glm-subbuild/CMakeFiles/9e6e1d154acff157575d673d020a28d1/glm-populate-download.rule"
+		},
+		{
+			"file" : "C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glm-subbuild/CMakeFiles/9e6e1d154acff157575d673d020a28d1/glm-populate-install.rule"
+		},
+		{
+			"file" : "C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glm-subbuild/CMakeFiles/9e6e1d154acff157575d673d020a28d1/glm-populate-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glm-subbuild/CMakeFiles/9e6e1d154acff157575d673d020a28d1/glm-populate-patch.rule"
+		},
+		{
+			"file" : "C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glm-subbuild/CMakeFiles/9e6e1d154acff157575d673d020a28d1/glm-populate-test.rule"
+		},
+		{
+			"file" : "C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glm-subbuild/CMakeFiles/9e6e1d154acff157575d673d020a28d1/glm-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"glm-populate"
+		],
+		"name" : "glm-populate"
+	}
+}

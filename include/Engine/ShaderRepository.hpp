@@ -14,9 +14,12 @@ namespace Engine {
 
         std::unordered_map<EngineID, unsigned int> objectShaderMap;
 
+        std::unordered_map<GLint, std::unordered_map<std::string, GLint>> locationCache;
+
         unsigned int compileShader(const std::string& source, GLenum type);
         std::string loadFile(const std::string &path);
 
+        GLint getUnfiromLocation(const std::string &name);
     public:
         std::unordered_map<unsigned int, std::vector<EngineID>> shaderToObjectIDsMap;
 
