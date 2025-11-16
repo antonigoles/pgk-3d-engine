@@ -5,14 +5,13 @@
 
 namespace Engine
 {
-    GameObject::GameObject() {
-        transform = Math::Transform();
-        this->label = "GameObject";
-        this->v_isVisible = true;
-    };
+    GameObject::GameObject() : GameObject("GameObject") {};
 
     GameObject::GameObject(std::string label) {
+        transform = Math::Transform();
         this->label = label;
+        this->v_isVisible = true;
+        this->parentCluster = nullptr;
     }
 
     void GameObject::registerUpdateFunction(GameObjectUpdateFunction updateFunction) {
@@ -61,4 +60,24 @@ namespace Engine
         return this->floatmap.contains(label);
     };
 
+    void GameObject::set_ref(const std::string &label, void* val) {
+        this->refmap[label] = val;
+    };
+
+    void* GameObject::get_ref(const std::string &label) {
+        return this->refmap[label];
+    };
+
+    bool GameObject::has_ref(const std::string &label) {
+        return this->refmap.contains(label);
+    };
+
+
+    bool GameObject::hasParentCluster() {
+        return this->parentCluster != nullptr;
+    };
+
+    void GameObject::setParentCluster(void* cluster) {
+        this->parentCluster = cluster;
+    };
 };

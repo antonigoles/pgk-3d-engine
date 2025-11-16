@@ -80,6 +80,9 @@
         "xstring": "cpp",
         "xtr1common": "cpp",
         "xtree": "cpp",
-        "xutility": "cpp"
+        "xutility": "cpp",
+        "span": "cpp",
+        "variant": "cpp",
+        "unordered_set": "cpp"
     }
 }

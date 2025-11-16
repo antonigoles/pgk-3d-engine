@@ -9,18 +9,15 @@ namespace Engine {
     class VolumetricParticle {
     public:
         glm::vec3 velocity;
+        glm::vec3 actingForce;
+        glm::vec3 startingPosition;
         Math::Transform transform;
+        int lifes;
+        bool isPaused;
     };
-
-    struct b_ParticleStatic {
-        glm::vec4 rotation;
-        float scale;
-        float padding[3];
-    };
-
     struct b_ParticleDynamic {
         glm::vec3 position;
-        float padding;
+        float scale;
     };
     
     class SphericalVolumetricParticleGenerator {
@@ -29,6 +26,10 @@ namespace Engine {
         glm::vec3 position;
         glm::vec3 actingForce;
         float radius;
+        int maxParticleLifes;
+
+        bool isPaused;
+        int killedParticles;
 
         float particleSpeed;
         float speedVariance;
@@ -61,9 +62,10 @@ namespace Engine {
     public:
         VolumetricParticleGeneratorRepository();
 
-        void createSphericalParticleSource(
+        std::pair<SphericalVolumetricParticleGenerator*, EngineID> createSphericalParticleSource(
             glm::vec3 position,
             glm::vec3 actingForce,
+            int maxParticleLifes,
             float radius,
             float particleSpeed,
             float speedVariance,
@@ -72,11 +74,14 @@ namespace Engine {
             float rotationVariance,
             float particleCount,
             EngineID particleMeshId,
-            EngineID shaderID
+            EngineID shaderID,
+            bool hardPaused
         );
 
         std::vector<SphericalVolumetricParticleGenerator*> getAllSphericalGenerators();
-        void stepSphericalGenerator(EngineID generatorID, float deltaTime);
+        bool stepSphericalGenerator(EngineID generatorID, float deltaTime);
+        void deleteSphericalGenerator(EngineID generatorID);
+        void resetGenerator(EngineID generatorID);
 
         // void createDirectionalParticleSource(
         //     glm::vec3 position,

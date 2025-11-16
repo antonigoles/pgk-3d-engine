@@ -6,10 +6,8 @@
 
 namespace Engine {
     class Player {
-    private:
-        GameObject* playerGameObject;
-
     public:
+        GameObject* playerGameObject;
         Math::Transform transform;
 
         Player();

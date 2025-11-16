@@ -8,4 +8,6 @@ namespace Engine::Math
    void meshRotate(Mesh& mesh, glm::quat rot);
    glm::quat rotateTowards(glm::quat currentRot, glm::vec3 targetDir, float t);
    float getRandom(float min, float max);
+
+   extern int seed;
 }

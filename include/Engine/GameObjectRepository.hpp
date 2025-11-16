@@ -18,6 +18,7 @@ namespace Engine
         GameObject* getGameObject(EngineID engineID);
 
         std::pair<GameObject*, EngineID> createGameObject(EngineID mesh, EngineID shaderProgram);
+        std::pair<GameObject*, EngineID> createEmptyGameObject();
     };
 
     extern GameObjectRepository gameObjectRepository;

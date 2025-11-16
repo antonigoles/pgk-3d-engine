@@ -14,7 +14,7 @@ namespace Engine {
         
         const float acceleration = 1.0f;
         const float deacceleration = 2.0f;
-        const float maxVelocity = 1.0f;
+        const float maxVelocity = 2.0f;
 
         glm::vec3 playerPos = this->transform.getPosition();
         glm::vec3 temporaryDirection = glm::vec3{0.0f, 0.0f, 0.0f};
@@ -67,8 +67,8 @@ namespace Engine {
         this->playerGameObject->transform.setPosition(this->transform.getPosition() - glm::vec3{0, 2.0f, 0});
         if (velocity > 0.0) {
             this->playerGameObject->set_vec3("forward", direction);
-            this->playerGameObject->set_float("velocity", velocity);
         }
+        this->playerGameObject->set_float("velocity", velocity);
     }
 
     void Player::setPlayerGameObject(GameObject* playerGameObject) {

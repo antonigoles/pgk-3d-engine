@@ -49,8 +49,10 @@ namespace Engine::Math
 
     float getRandom(float min, float max) {
         static std::random_device rd;  // Źródło entropii (używane tylko raz)
-        static std::mt19937 gen(rd()); // Generator Mersenne Twister
+        static std::mt19937 gen(seed); // Generator Mersenne Twister
         std::uniform_real_distribution<float> dist(min, max);
         return dist(gen);
     }
+
+    int seed = 100007;
 };

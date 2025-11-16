@@ -16,18 +16,20 @@ Engine::Window* gameWindow = nullptr;
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
     glViewport(0, 0, width, height);
+    SCR_WIDTH = width;
+    SCR_HEIGHT = height;
     if (gameWindow != nullptr) gameWindow->setViewportDimensions(width, height);
 }
 
-// --- Obsługa wejścia ---
-void processInput(GLFWwindow* window)
+int main(int argc, char *argv[])
 {
-    if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
-        glfwSetWindowShouldClose(window, true);
-}
+    // parse args
+    int N = 10;
+    int seed = 21032012;
 
-int main()
-{
+    if (argc >= 2) seed = std::stoi(argv[1]);
+    if (argc >= 3) N = std::stoi(argv[2]); 
+
     // --- Inicjalizacja GLFW ---
     if (!glfwInit()) {
         std::cerr << "Nie udało się zainicjalizować GLFW\n";
@@ -64,7 +66,7 @@ int main()
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_MULTISAMPLE);
     
-    gameWindow = Game::init(SCR_WIDTH, SCR_HEIGHT);
+    gameWindow = Game::init(SCR_WIDTH, SCR_HEIGHT, N, seed);
     // gameWindow = ModelEditor::init(SCR_WIDTH, SCR_HEIGHT);
 
     float deltaTime = 0.0f;
@@ -75,14 +77,18 @@ int main()
     {
         double timeStamp = glfwGetTime();
         
-        processInput(window);
-
         // --- Czyszczenie ekranu ---
         glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-
+        glViewport(0, 0, SCR_WIDTH, SCR_HEIGHT);
+        gameWindow->setViewportDimensions(SCR_WIDTH / 4, SCR_HEIGHT / 4);
         gameWindow->step(window, deltaTime);
+
+        glViewport(3 * SCR_WIDTH / 4, 3 * SCR_HEIGHT / 4, SCR_WIDTH / 4, SCR_HEIGHT / 4);
+        glClear(GL_DEPTH_BUFFER_BIT);
+        gameWindow->setViewportDimensions(SCR_WIDTH / 4, SCR_HEIGHT / 4);
+        gameWindow->renderOnly(1, window);
 
         glfwSwapBuffers(window);
         glfwPollEvents();

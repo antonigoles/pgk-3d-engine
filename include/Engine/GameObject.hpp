@@ -7,11 +7,13 @@ namespace Engine
 {
     class GameObject {
     private:
+        void* parentCluster;
         bool v_isVisible;
         std::vector<GameObjectUpdateFunction> updateFunctions;
 
         std::unordered_map<std::string, glm::vec3> vec3map;
         std::unordered_map<std::string, float> floatmap;
+        std::unordered_map<std::string, void*> refmap;
     public:
         Math::Transform transform;
         std::string label;
@@ -20,6 +22,9 @@ namespace Engine
         
         void registerUpdateFunction(GameObjectUpdateFunction updateFunction);
         void callUpdateFunctions(float deltaTime);
+
+        bool hasParentCluster();
+        void setParentCluster(void* cluster);
         
         void hide();
         void show();
@@ -32,5 +37,9 @@ namespace Engine
         void set_float(const std::string &label, float val);
         float get_float(const std::string &label);
         bool has_float(const std::string &label);
+
+        void set_ref(const std::string &label, void* val);
+        void* get_ref(const std::string &label);
+        bool has_ref(const std::string &label);
     };
 };

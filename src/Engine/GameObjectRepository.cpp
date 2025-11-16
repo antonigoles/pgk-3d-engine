@@ -11,6 +11,13 @@ namespace Engine
     EngineID GameObjectRepository::getNextGameObjectIndex() {
         return this->gameObjectCounter++;
     };
+
+    std::pair<GameObject*, EngineID> GameObjectRepository::createEmptyGameObject() {
+        EngineID id = this->getNextGameObjectIndex();
+        GameObject* gameObject = new GameObject();
+        this->gameObjectMap[id] = gameObject;
+        return {gameObject, id};
+    }
     
     std::pair<GameObject*, EngineID> GameObjectRepository::createGameObject(
         EngineID mesh, 

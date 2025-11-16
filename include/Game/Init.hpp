@@ -3,5 +3,5 @@
 
 namespace Game
 {
-    Engine::Window* init(int v_width, int v_height);
+    Engine::Window* init(int v_width, int v_height, int N, int seed);
 };

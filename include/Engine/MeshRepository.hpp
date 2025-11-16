@@ -36,6 +36,8 @@ namespace Engine
         EngineID getMeshIDByGameObject(GameObject *gameObject);
 
         void assignMesh(GameObject* gameObject, EngineID meshId);
+
+        std::pair<glm::vec3, glm::vec3> getMeshCuboid(EngineID mesh, float padding);
     };
 
     extern MeshRepository meshRepository;

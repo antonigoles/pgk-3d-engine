@@ -212,6 +212,34 @@ namespace Engine
         return this->objectMap[gameObject];
     }
 
+    std::pair<glm::vec3, glm::vec3> MeshRepository::getMeshCuboid(EngineID mesh, float padding) {
+        float maxX = std::numeric_limits<float>::min();
+        float maxY = std::numeric_limits<float>::min();
+        float maxZ = std::numeric_limits<float>::min();
+
+        float minX = std::numeric_limits<float>::max();
+        float minY = std::numeric_limits<float>::max();
+        float minZ = std::numeric_limits<float>::max();
+
+        std::vector<float>& meshRef = this->meshMap[mesh];
+        
+        for (int i = 0; i<meshRef.size(); i+=6) {
+            float x = meshRef[i];
+            float y = meshRef[i+1];
+            float z = meshRef[i+2];
+            
+            maxX = std::max(x, maxX);
+            maxY = std::max(x, maxY);
+            maxZ = std::max(x, maxZ);
+
+            minX = std::min(x, minX);
+            minY = std::min(x, minY);
+            minZ = std::min(x, minZ);
+        }
+
+        return {{minX - padding, minY - padding, minZ - padding}, {maxX + padding, maxY + padding, maxZ + padding}};
+    };
+
     MeshRepository meshRepository = MeshRepository();
 };
 

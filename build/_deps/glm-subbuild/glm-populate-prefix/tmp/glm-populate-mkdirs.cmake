@@ -4,19 +4,19 @@
 cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
-  "C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glm-src"
-  "C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glm-build"
-  "C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glm-subbuild/glm-populate-prefix"
-  "C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glm-subbuild/glm-populate-prefix/tmp"
-  "C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp"
-  "C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glm-subbuild/glm-populate-prefix/src"
-  "C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp"
+  "/home/antoni/pgk-3d-engine/build/_deps/glm-src"
+  "/home/antoni/pgk-3d-engine/build/_deps/glm-build"
+  "/home/antoni/pgk-3d-engine/build/_deps/glm-subbuild/glm-populate-prefix"
+  "/home/antoni/pgk-3d-engine/build/_deps/glm-subbuild/glm-populate-prefix/tmp"
+  "/home/antoni/pgk-3d-engine/build/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp"
+  "/home/antoni/pgk-3d-engine/build/_deps/glm-subbuild/glm-populate-prefix/src"
+  "/home/antoni/pgk-3d-engine/build/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp"
 )
 
-set(configSubDirs Debug)
+set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/${subDir}")
+    file(MAKE_DIRECTORY "/home/antoni/pgk-3d-engine/build/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "C:/Users/Antoni/Desktop/pgk-3d-engine/build/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "/home/antoni/pgk-3d-engine/build/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp${cfgdir}") # cfgdir has leading slash
 endif()

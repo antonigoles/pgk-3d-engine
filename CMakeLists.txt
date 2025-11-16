@@ -26,6 +26,10 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(glad)
 
+set(GLAD_PROFILE "core")
+set(GLAD_API "gl=4.6")      # <--- to jest najważniejsze
+set(GLAD_GENERATOR "c")
+
 # --- GLM ---
 FetchContent_Declare(
     glm
