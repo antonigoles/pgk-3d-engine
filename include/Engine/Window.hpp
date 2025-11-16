@@ -4,6 +4,13 @@
 #include <Engine/Player.hpp>
 
 namespace Engine {
+    enum WireframeRenderingMode {
+        NONE = 0,
+        MINOR_VIEWPORT = 1,
+        MAJOR_VIEWPORT = 2,
+        BOTH_VIEWPORTS = 4
+    };
+
     class Window {
     private:
         Camera *camera[2];
@@ -11,7 +18,8 @@ namespace Engine {
         GameObject *skybox;
 
         int v_width, v_height;
-        
+        WireframeRenderingMode wireframeRenderingMode;
+
     public:
         Window(int v_width, int v_height);
         void setViewportDimensions(int v_width, int v_height);
@@ -24,5 +32,13 @@ namespace Engine {
 
         void cursorSetFocusMode(GLFWwindow * window);
         void cursorSetFreeMode(GLFWwindow * window);
+
+        void setNextWireframeRenderingMode();
+        void setPreviousWireframeRenderingMode();
+
+        void setPolygonModeForMinorViewport();
+        void setPolygonModeForMajorViewport();
+
+        bool inputClickedOnce(GLFWwindow *window, int key);
     };
 };

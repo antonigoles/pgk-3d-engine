@@ -12,6 +12,7 @@ namespace Engine
         this->label = label;
         this->v_isVisible = true;
         this->parentCluster = nullptr;
+        this->v_isDisabled = false;
     }
 
     void GameObject::registerUpdateFunction(GameObjectUpdateFunction updateFunction) {
@@ -20,6 +21,18 @@ namespace Engine
 
     void GameObject::callUpdateFunctions(float deltaTime) {
         for (auto fun : this->updateFunctions) fun({this, deltaTime});
+    };
+
+    void GameObject::disable() {
+        this->v_isDisabled = true;
+    };
+
+    void GameObject::enable() {
+        this->v_isDisabled = false;
+    };
+
+    bool GameObject::isEnabled() {
+        return !this->v_isDisabled;
     };
 
     void GameObject::hide() {
@@ -79,5 +92,9 @@ namespace Engine
 
     void GameObject::setParentCluster(void* cluster) {
         this->parentCluster = cluster;
+    };
+    
+    void* GameObject::getParentCluster() {
+        return this->parentCluster;
     };
 };

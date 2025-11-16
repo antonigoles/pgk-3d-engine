@@ -1,15 +1,14 @@
 ### Projekt 4 na PGK
 
 Do zrobienia:
-- Poprawna implementacja FPS
-- Dodatkowy widok rysować w trybie szkieletu
-z możliwością zmieniania trybu strzałkami
-- dodać przy pomocy fragment shadera wzorki na przeszkodach, może jakiś szum tak żeby wyglądały jak asteroidy?
 - Opisać efekty dodatkowe w pliku README
-- Ulepszenie efektu przy zderzeniu z przeszkodą
-- Jakiś efekt na dolecenie do celu
 
 Zrobione:
+- Jakiś efekt na dolecenie do celu
+- Ulepszenie efektu przy zderzeniu z przeszkodą
+- dodać przy pomocy fragment shadera wzorki na przeszkodach (mają teraz kształt asteroidy)
+- Poprawna implementacja FPS
+- Dodatkowy widok rysować w trybie szkieletu z możliwością zmieniania trybu strzałkami
 - Dwa widoki (TPS i FPS)
 - Kontrola kamery myszką
 - Kontrola gracza klawiaturą

@@ -6,6 +6,7 @@
 #include <Engine/Colisions.hpp>
 #include <Engine/SimplePhysics.hpp>
 #include <Engine/Player.hpp>
+#include <Engine/GameEndService.hpp>
 
 namespace Game 
 {
@@ -66,12 +67,8 @@ namespace Game
             particleGenerator->isPaused = true;
         }
 
-        auto colisions = Engine::singleOBBDynamicMultiSphericalColiderColisionService.getColisions();
-        for (auto colision : colisions) {
-            Engine::Player* player = (Engine::Player*)gameObject->get_ref("playerObject");
-            glm::vec3 dir = glm::normalize(colision->position - gameObject->transform.getPosition());
-            Engine::simplePhysics.punch(&player->transform, 1.0f, 2.0f * dir);
-            break;
+        if (glm::length(gameObject->transform.getPosition() - glm::vec3{0.0f, 0.0f, -150.0f}) <= 12.5f) {
+            Engine::gameEndService.startGameEnd();
         }
 
         if (!init) init = true;

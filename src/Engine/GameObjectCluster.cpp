@@ -17,11 +17,12 @@ namespace Engine
         this->meshSize = meshRepository.getMeshSize(meshID);
     };
 
-    void GameObjectCluster::updateAndBindSSBO() {
+    unsigned int GameObjectCluster::updateAndBindSSBO() {
         std::vector<SSBO_Transform> updatedData;
         
         for (auto obj : this->gameObjects) {
-            updatedData.push_back({obj->transform.getModelMatrix()});
+            if (obj->isEnabled())
+                updatedData.push_back({obj->transform.getModelMatrix()});
         }
 
         glBindBuffer(GL_SHADER_STORAGE_BUFFER, this->SSBO);
@@ -32,6 +33,8 @@ namespace Engine
             updatedData.data()
         );
         glBindBufferBase(GL_SHADER_STORAGE_BUFFER, 0, this->SSBO);
+
+        return updatedData.size();
     };
 
     void GameObjectCluster::initiateSSBO() {
@@ -64,7 +67,13 @@ namespace Engine
     };
 
     void GameObjectCluster::addObject(GameObject *gameObject) {
-        this->gameObjects.push_back(gameObject);
+        this->gameObjects.insert(gameObject);
+        gameObject->setParentCluster(this);
+    };
+
+    void GameObjectCluster::deleteObject(GameObject *gameObject) {
+        this->gameObjects.erase(gameObject);
+        gameObject->setParentCluster(nullptr);
     };
 
 

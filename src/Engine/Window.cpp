@@ -8,34 +8,112 @@
 #include <Engine/GameObjectCluster.hpp>
 #include <Engine/Colisions.hpp>
 #include <Engine/SimplePhysics.hpp>
+#include <Engine/GameEndService.hpp>
 
 namespace Engine {
-    Window::Window(int v_width, int v_height) : v_width(v_width), v_height(v_height) 
-    {};
+    Window::Window(int v_width, int v_height) : v_width(v_width), v_height(v_height) {
+        this->wireframeRenderingMode = NONE;
+    };
 
+    void Window::setNextWireframeRenderingMode() {
+        switch (this->wireframeRenderingMode)
+        {
+            case WireframeRenderingMode::NONE:
+                this->wireframeRenderingMode = WireframeRenderingMode::MINOR_VIEWPORT;
+                break;
+            case WireframeRenderingMode::MINOR_VIEWPORT:
+                this->wireframeRenderingMode = WireframeRenderingMode::MAJOR_VIEWPORT;
+                break;
+            case WireframeRenderingMode::MAJOR_VIEWPORT:
+                this->wireframeRenderingMode = WireframeRenderingMode::BOTH_VIEWPORTS;
+                break;
+            case WireframeRenderingMode::BOTH_VIEWPORTS:
+                this->wireframeRenderingMode = WireframeRenderingMode::NONE;
+                break;
+        }
+    };
+
+    void Window::setPreviousWireframeRenderingMode() {
+        switch (this->wireframeRenderingMode)
+        {
+            case WireframeRenderingMode::MINOR_VIEWPORT:
+                this->wireframeRenderingMode = WireframeRenderingMode::NONE;
+                break;
+            case WireframeRenderingMode::MAJOR_VIEWPORT:
+                this->wireframeRenderingMode = WireframeRenderingMode::MINOR_VIEWPORT;
+                break;
+            case WireframeRenderingMode::BOTH_VIEWPORTS:
+                this->wireframeRenderingMode = WireframeRenderingMode::MAJOR_VIEWPORT;
+                break;
+            case WireframeRenderingMode::NONE:
+                this->wireframeRenderingMode = WireframeRenderingMode::BOTH_VIEWPORTS;
+                break;
+        }
+    };
+
+    void Window::setPolygonModeForMinorViewport() {
+        switch (this->wireframeRenderingMode)
+        {
+            case WireframeRenderingMode::MINOR_VIEWPORT:
+            case WireframeRenderingMode::BOTH_VIEWPORTS:
+                glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+                break;
+            case WireframeRenderingMode::MAJOR_VIEWPORT:
+            case WireframeRenderingMode::NONE:
+                glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);    
+                break;
+        }
+    };
+
+    void Window::setPolygonModeForMajorViewport() {
+        switch (this->wireframeRenderingMode)
+        {
+            case WireframeRenderingMode::MAJOR_VIEWPORT:
+            case WireframeRenderingMode::BOTH_VIEWPORTS:
+                glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+                break;
+            case WireframeRenderingMode::MINOR_VIEWPORT:
+            case WireframeRenderingMode::NONE:
+                glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);    
+                break;
+        }
+    };
+    
     void Window::setViewportDimensions(int v_width, int v_height) {
         this->v_width = v_width;
         this->v_height = v_height;
     };
 
+    bool Window::inputClickedOnce(GLFWwindow *window, int key) {
+        static std::unordered_map<int, int> keyPreviousFrameState;
+        auto state = glfwGetKey(window, key);
+        
+        if (!keyPreviousFrameState.contains(key) || keyPreviousFrameState[key] != GLFW_PRESS) {
+            if (state == GLFW_PRESS) {
+                keyPreviousFrameState[key] = state;
+                return true;
+            }
+        }
+
+        keyPreviousFrameState[key] = state;
+        return false;
+    };
+
     void Window::step(GLFWwindow * window, float deltaTime) {
-        static bool releaseStopButton = true;
-        static bool stop = false;
         glm::mat4 projection = glm::perspective(
             glm::radians(this->camera[0]->getFOV() / 2.0f), 
             ((float)this->v_width) / ((float)this->v_height), 0.1f, 500.0f
         );
         
-        if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS && releaseStopButton) {
-            stop = !stop;
-            releaseStopButton = false;
+        if (this->inputClickedOnce(window, GLFW_KEY_UP)) {
+            this->setNextWireframeRenderingMode();
         }
 
-        if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_RELEASE) {
-            releaseStopButton = true;
+        if (this->inputClickedOnce(window, GLFW_KEY_DOWN)) {
+            this->setPreviousWireframeRenderingMode();
         }
 
-        if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
+        if (this->inputClickedOnce(window, GLFW_KEY_ESCAPE)) {
             this->cursorSetFreeMode(window);
         }
 
@@ -51,6 +129,8 @@ namespace Engine {
             this->camera[0]->transform.getPosition()
         );
         
+        this->setPolygonModeForMajorViewport();
+
         float i = 0;
         for (auto shaderIdToObjectsPair : shaderRepository.shaderToObjectIDsMap) {
             EngineID shaderID = shaderIdToObjectsPair.first;
@@ -65,6 +145,7 @@ namespace Engine {
                 GameObject* gameObject = gameObjectRepository.getGameObject(engineID);
                 if (!gameObject->isVisible()) continue;
                 if(gameObject->hasParentCluster()) continue;
+                if(!gameObject->isEnabled()) continue;
 
                 gameObject->callUpdateFunctions(deltaTime);
 
@@ -88,9 +169,12 @@ namespace Engine {
             shaderRepository.setUniformVec3("lightPos", glm::vec3(0.0f, 0.0f, -150.0f));
 
             glBindVertexArray(gameObjectCluster->getMeshVAO());
-            for (auto object : gameObjectCluster->gameObjects) object->callUpdateFunctions(deltaTime);
-            gameObjectCluster->updateAndBindSSBO();
-            glDrawArraysInstanced(GL_TRIANGLES, 0, gameObjectCluster->getMeshSize(), gameObjectCluster->gameObjects.size());
+            for (auto object : gameObjectCluster->gameObjects) {
+                if (object->isEnabled())
+                    object->callUpdateFunctions(deltaTime);
+            }
+            unsigned int countToDraw = gameObjectCluster->updateAndBindSSBO();
+            glDrawArraysInstanced(GL_TRIANGLES, 0, gameObjectCluster->getMeshSize(), countToDraw);
         }
 
         // render particles
@@ -110,12 +194,15 @@ namespace Engine {
             
             if (!volumetricParticleGeneratorRepository.stepSphericalGenerator(generator->generatorID, deltaTime)) {
                 volumetricParticleGeneratorRepository.deleteSphericalGenerator(generator->generatorID);
+                continue;
             };
             glDrawArraysInstanced(GL_TRIANGLES, 0, meshRepository.getMeshSize(generator->particleMeshId), generator->particleCount - generator->killedParticles);
         }
 
         singleOBBDynamicMultiSphericalColiderColisionService.updateStructure();
         simplePhysics.progressEngine(deltaTime);
+
+        gameEndService.progressGameEndAnimation(deltaTime);
     };
 
     void Window::renderOnly(int cameraIndex, GLFWwindow * window) {
@@ -128,15 +215,18 @@ namespace Engine {
         this->camera[cameraIndex]->transform.setRotation(
             Math::lookAtQuat(
                 {0.0f, 0.0f, 0.0f},
-                this->camera[0]->getForward(),
+                player->playerGameObject->transform.getRotation() * glm::vec3{0.0f, 0.0f, -1.0f},
                 {0.0f, 1.0f, 0.0f}
             )
         );
 
-        this->camera[cameraIndex]->syncCameraAndTarget(player->transform);
+        this->camera[cameraIndex]->syncCameraAndTarget(player->playerGameObject->transform);
         this->skybox->transform.setPosition(
             this->camera[cameraIndex]->transform.getPosition()
         );
+        
+        this->setPolygonModeForMinorViewport();
+
         this->player->playerGameObject->hide();
         float i = 0;
         for (auto shaderIdToObjectsPair : shaderRepository.shaderToObjectIDsMap) {
@@ -151,6 +241,7 @@ namespace Engine {
                 i++;
                 GameObject* gameObject = gameObjectRepository.getGameObject(engineID);
                 if (!gameObject->isVisible()) continue;
+                if (!gameObject->isEnabled()) continue;
 
                 EngineID meshID = meshRepository.getMeshIDByGameObject(gameObject);
                 shaderRepository.setUniformMat4("model", gameObject->transform.getModelMatrix());
@@ -167,13 +258,13 @@ namespace Engine {
             shaderRepository.useShaderWithDataByID(gameObjectCluster->getShader(), {}, {});
 
             shaderRepository.setUniformMat4("projection", projection);
-            shaderRepository.setUniformMat4("view", this->camera[0]->getViewMatrix());
-            shaderRepository.setUniformVec3("viewPos", this->camera[0]->transform.getPosition());
+            shaderRepository.setUniformMat4("view", this->camera[cameraIndex]->getViewMatrix());
+            shaderRepository.setUniformVec3("viewPos", this->camera[cameraIndex]->transform.getPosition());
             shaderRepository.setUniformVec3("lightPos", glm::vec3(0.0f, 0.0f, -150.0f));
 
             glBindVertexArray(gameObjectCluster->getMeshVAO());
-            gameObjectCluster->updateAndBindSSBO();
-            glDrawArraysInstanced(GL_TRIANGLES, 0, gameObjectCluster->getMeshSize(), gameObjectCluster->gameObjects.size());
+            unsigned int countToDraw = gameObjectCluster->updateAndBindSSBO();
+            glDrawArraysInstanced(GL_TRIANGLES, 0, gameObjectCluster->getMeshSize(), countToDraw);
         }
 
         // render particles

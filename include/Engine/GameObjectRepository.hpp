@@ -8,7 +8,7 @@ namespace Engine
     class GameObjectRepository {
     private:
         std::unordered_map<EngineID, GameObject*> gameObjectMap;
-
+        
         EngineID gameObjectCounter = 0;
 
         EngineID getNextGameObjectIndex();
@@ -17,6 +17,7 @@ namespace Engine
 
         GameObject* getGameObject(EngineID engineID);
 
+        std::vector<GameObject*> gellAllGameObjects();
         std::pair<GameObject*, EngineID> createGameObject(EngineID mesh, EngineID shaderProgram);
         std::pair<GameObject*, EngineID> createEmptyGameObject();
     };

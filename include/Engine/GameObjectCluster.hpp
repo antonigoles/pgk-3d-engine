@@ -1,6 +1,7 @@
 #pragma once
 #include <Engine/GameObject.hpp>
 #include <OpenGL.hpp>
+#include <unordered_set>
 
 namespace Engine 
 {
@@ -23,11 +24,11 @@ namespace Engine
     public:
         GameObjectCluster();
         
-        std::vector<GameObject*> gameObjects;
+        std::unordered_set<GameObject*> gameObjects;
         void setMesh(EngineID meshID);
         void setShader(EngineID shaderID);
 
-        void updateAndBindSSBO();
+        unsigned int updateAndBindSSBO();
         void initiateSSBO();
 
         EngineID getShader();
@@ -36,6 +37,7 @@ namespace Engine
         unsigned int getMeshSize();
 
         void addObject(GameObject *gameObject);
+        void deleteObject(GameObject *gameObject);
     };
 
 

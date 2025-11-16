@@ -10,6 +10,8 @@
 #include <Engine/VolumetricParticles.hpp>
 #include <Engine/GameObjectCluster.hpp>
 #include <Engine/Colisions.hpp>
+#include <Engine/AsteroidExplosionService.hpp>
+#include <Engine/GameEndService.hpp>
 
 namespace Game
 {
@@ -73,7 +75,7 @@ namespace Game
         Engine::EngineID planeMesh = Engine::meshRepository.loadMeshFromFile("meshes/plane.3d");
 
         Engine::EngineID sphereMesh = Engine::meshRepository.loadMesh(Engine::Math::generateSphere(8));
-        Engine::EngineID inverseSphereMesh = Engine::meshRepository.loadMesh(Engine::Math::generateInverseSphere(64));
+        Engine::EngineID inverseSphereMesh = Engine::meshRepository.loadMesh(Engine::Math::generateInverseSphere(16));
     
         // // 2. Load some shaders
         Engine::EngineID asteroidShader = Engine::shaderRepository.loadShaderProgramAs(
@@ -118,26 +120,59 @@ namespace Game
         }
 
         // // 3. Create game object
+        std::vector<glm::vec3> positionsPool;
+        const float a1 = 3.0f;
+        const float r = 2.0f * (N*N*N - a1);
+        
+        for (int j = 0; j<N; j++) {
+            int ai = a1 + (float)j * r;
+            int k = pow(ai, 0.333f) + 1;
+            for (int i = 0; i<ai; i++) {
+                // float xf = (((float)((i/(k*k)) % k) / (float)(k)));
+                float yf = ((float)(i % k) / (float)(k)) * 2.0f * 3.14f;
+                float zf = ((float)((i/k) % k) / (float)(k)) * 2.0f * 3.14f;
+
+                glm::vec3 randomPosition = glm::normalize(glm::quat(
+                    glm::vec3{
+                        0.0f,
+                        zf,
+                        yf
+                    }
+                )) * glm::vec3{1.0f, 0.0f, 0.0f} * (10.0f * j + 20.0f);
+
+                positionsPool.push_back(randomPosition);
+            }
+        }
+
+        std::vector<glm::vec3> choices;
         int k = N;
         for (int i = 0; i<N*N*N; i++) {
-            float xf = (((float)((i/(k*k)) % k) / (float)(k)));
-            float yf = ((float)(i % k) / (float)(k)) * 2.0f * 3.14f;
-            float zf = ((float)((i/k) % k) / (float)(k)) * 2.0f * 3.14f;
 
-            glm::vec3 randomPosition = glm::normalize(glm::quat(
-                glm::vec3{
-                    0.0f,
-                    zf + xf,
-                    yf - xf
+            int choice = Engine::Math::getRandom(0.0, positionsPool.size()-1);
+            glm::vec3 randomPosition = positionsPool[choice];
+            
+            do {
+                std::swap(positionsPool[choice], positionsPool[positionsPool.size()-1]);
+                positionsPool.pop_back();
+                bool found = false;
+                for (auto& v : choices) {
+                    if (glm::length(v - randomPosition) <= 10.0f) {
+                        choice = Engine::Math::getRandom(0.0, positionsPool.size()-1);
+                        randomPosition = positionsPool[choice];
+                        found = true;
+                    }
                 }
-            )) * glm::vec3{1.0f, 0.0f, 0.0f} * (float)(N) * (14.0f * xf + 5.0f);
+                if (!found) break;
+            } while(true);
+
+            choices.push_back(randomPosition);
 
             Engine::EngineID rockMesh = asteroidMeshPool[i % asteroidMeshPool.size()];
             auto e = Engine::gameObjectRepository.createEmptyGameObject();
             clusterPool[i % asteroidMeshPool.size()]->addObject(e.first);
 
             e.first->transform.setPosition(randomPosition);
-            e.first->transform.setScale(1.0f + Engine::Math::getRandom(1.0, 1.5f));
+            e.first->transform.setScale(3.0f * Engine::Math::getRandom(1.0, 1.7f));
 
             e.first->registerUpdateFunction(updateBall);
             e.first->set_float("index", (float)i);
@@ -186,6 +221,12 @@ namespace Game
             "shaders/particle.frag"
         );
 
+        Engine::EngineID asteroidParticleShader = Engine::shaderRepository.loadShaderProgramAs(
+            "asteroidParticle",
+            "shaders/asteroidParticle.vert",
+            "shaders/asteroidParticle.frag"
+        );
+
         Engine::EngineID particleMesh = Engine::meshRepository.loadMesh({
             -0.5f, -0.5f, 0.0f,
             0.5f, -0.5f, 0.0f,
@@ -210,6 +251,14 @@ namespace Game
 
         playerGameObject.first->set_ref("particleGenerator", rocketParticlesGenerator.first);
         playerGameObject.first->set_ref("playerObject", player);
+
+        Engine::asteroidExplosionService.setExplosionParticleMesh(asteroidMeshPool[0]);
+        Engine::asteroidExplosionService.setExplosionParticleShader(asteroidParticleShader);
+
+        Engine::gameEndService.updateGameEndActors({
+            playerGameObject.first,
+            lightSource.first
+        });
 
         return window;
     };

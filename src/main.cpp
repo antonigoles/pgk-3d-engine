@@ -24,7 +24,7 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 int main(int argc, char *argv[])
 {
     // parse args
-    int N = 10;
+    int N = 4;
     int seed = 21032012;
 
     if (argc >= 2) seed = std::stoi(argv[1]);
@@ -97,7 +97,7 @@ int main(int argc, char *argv[])
 
         // std::cout << 1/deltaTime  << " fps " << "\n";
 
-        if (frameTimeCount > 5.0) {
+        if (frameTimeCount > 2.0) {
             std::cout << ((float)frameCount)/(frameTimeCount) << "FPS" << "\n";
             frameCount = 0;
             frameTimeCount = 0;

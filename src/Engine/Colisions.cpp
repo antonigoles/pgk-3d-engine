@@ -8,10 +8,20 @@
 namespace Engine
 {
     SingleOBBDynamicMultiSphericalColiderColisionService::SingleOBBDynamicMultiSphericalColiderColisionService() {
+        nextID = 0;
+    };
+
+    EngineID SingleOBBDynamicMultiSphericalColiderColisionService::getNextID() {
+        return this->nextID++;
     };
 
     void SingleOBBDynamicMultiSphericalColiderColisionService::addStatic(GameObject *ref, float radius) {
-        this->sortedStructure.push_back(StaticColider{ref, ref->transform.getPosition(), radius});
+        EngineID id = this->getNextID();
+        this->coliderMap[id] = (StaticColider{id, ref, ref->transform.getPosition(), radius});
+    };
+
+    void SingleOBBDynamicMultiSphericalColiderColisionService::removeStatic(EngineID coliderID) {
+        this->coliderMap.erase(coliderID);
     };
 
     void SingleOBBDynamicMultiSphericalColiderColisionService::setDynamic(GameObject *ref, glm::vec3 p1, glm::vec3 p2) {
@@ -31,7 +41,7 @@ namespace Engine
         glm::vec3 obbHalfSize = (p2 - p1) * 0.5f * scale;
         glm::mat3 rotMat = glm::mat3_cast(rot);
         
-        for (auto staticColider : this->sortedStructure) {
+        for (auto& [engineID, staticColider] : this->coliderMap) {
             auto sphereCenter = staticColider.position;
             auto sphereRadius = staticColider.radius;
 
@@ -54,7 +64,7 @@ namespace Engine
     };
 
     void SingleOBBDynamicMultiSphericalColiderColisionService::updateStructure() {
-        for (auto staticColider : this->sortedStructure) {
+        for (auto& [engineID, staticColider] : this->coliderMap) {
             staticColider.position = staticColider.owner->transform.getPosition();
         }
     };

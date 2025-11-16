@@ -18,6 +18,14 @@ namespace Engine
         this->gameObjectMap[id] = gameObject;
         return {gameObject, id};
     }
+
+    std::vector<GameObject*> GameObjectRepository::gellAllGameObjects() {
+        std::vector<GameObject*> result;
+        for (auto& [key, object] : this->gameObjectMap) {
+            result.push_back(object);
+        }
+        return result; 
+    };
     
     std::pair<GameObject*, EngineID> GameObjectRepository::createGameObject(
         EngineID mesh, 

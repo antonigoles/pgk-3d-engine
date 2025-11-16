@@ -92,11 +92,8 @@ void dayTime() {
 
 void space() {
     FragColor = vec4(0.0f/255.0f, 0.0f/255.0f, 9.0f/255.0f, 1.0f);
-
     float n = pow(snoise(FragPos * 32.0f), 2);
-    if (n > 0.9) {
-        FragColor = vec4(1.0f, 1.0f, 1.0f, 1.0f);
-    }
+    FragColor = mix(FragColor, FragColor * 2.0f, n);
 }
 
 void main()

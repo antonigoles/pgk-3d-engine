@@ -127,7 +127,6 @@ namespace Engine {
             dynamicParticleDataBufferData.data()
         );
         glBindBufferBase(GL_SHADER_STORAGE_BUFFER, 1, generator->dynamicSSBO);
-        glBindBufferBase(GL_SHADER_STORAGE_BUFFER, 0, generator->staticSSBO);
         return true;
     };
 

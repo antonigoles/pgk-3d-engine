@@ -1,6 +1,9 @@
 #include <Engine/Player.hpp>
 #include <Engine/Math/Math.hpp>
 #include <OpenGL.hpp>
+#include <Engine/Colisions.hpp>
+#include <Engine/AsteroidExplosionService.hpp>
+#include <Engine/SimplePhysics.hpp>
 
 namespace Engine {
     Player::Player() {
@@ -69,6 +72,18 @@ namespace Engine {
             this->playerGameObject->set_vec3("forward", direction);
         }
         this->playerGameObject->set_float("velocity", velocity);
+
+        auto colisions = Engine::singleOBBDynamicMultiSphericalColiderColisionService.getColisions();
+        for (auto colision : colisions) {
+            this->transform.setPosition(playerPos);
+            this->playerGameObject->transform.setPosition(playerPos - glm::vec3{0, 2.0f, 0});
+            asteroidExplosionService.explodeAsteroid(colision->owner, colision->id);
+            
+            glm::vec3 dir = glm::normalize(this->playerGameObject->transform.getPosition() - colision->position);
+
+            simplePhysics.punch(&this->transform, 1.0f, 30.0f * dir);
+            break;
+        }
     }
 
     void Player::setPlayerGameObject(GameObject* playerGameObject) {

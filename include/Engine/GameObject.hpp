@@ -9,6 +9,7 @@ namespace Engine
     private:
         void* parentCluster;
         bool v_isVisible;
+        bool v_isDisabled;
         std::vector<GameObjectUpdateFunction> updateFunctions;
 
         std::unordered_map<std::string, glm::vec3> vec3map;
@@ -25,10 +26,15 @@ namespace Engine
 
         bool hasParentCluster();
         void setParentCluster(void* cluster);
+        void* getParentCluster();
         
         void hide();
         void show();
         bool isVisible();
+
+        void disable();
+        void enable();
+        bool isEnabled();
 
         void set_vec3(const std::string &label, glm::vec3 val);
         glm::vec3 get_vec3(const std::string &label);
